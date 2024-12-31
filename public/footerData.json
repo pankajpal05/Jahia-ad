@@ -1,0 +1,19 @@
+{
+    "title": "Starting a new project or want to collaborate with us?",
+   
+    "navigationLinks": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Careers", "href": "/careers" },
+      { "label": "Press", "href": "/press" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Pricing", "href": "/pricing" }
+    ],
+    "socialLinks": [
+      { "label": "Facebook", "href": "#" },
+      { "label": "YouTube", "href": "#" },
+      { "label": "Instagram", "href": "#" },
+      { "label": "Github", "href": "#" }
+    ],
+    "copyrightText": "All rights reserved. Copyright © 2024 Material Tailwind."
+  }
+  

@@ -1,4 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import Footer from "./components/Footer";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Import Swiper styles
 import "swiper/css";
@@ -80,6 +82,7 @@ const App = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <Footer/>
     </>
   );
 };
