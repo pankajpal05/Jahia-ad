@@ -42,7 +42,7 @@ const Section = ({ backgroundType, backgroundContent, children }) => {
 
   return (
     <section
-      className={`relative w-screen ${sectionHeight} flex items-center justify-center overflow-hidden`}>
+      className={`relative w-full ${sectionHeight} flex items-center justify-center overflow-hidden`}>
       {/* Background Layer */}
       {renderBackground()}
       {/* Foreground Content */}
