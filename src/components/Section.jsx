@@ -38,7 +38,7 @@ const Section = ({ backgroundType, backgroundContent, children }) => {
   };
 
   const sectionHeight =
-    backgroundType === "parallax" ? "h-[1200px]" : "h-[700px]";
+    backgroundType === "parallax" ? "h-[1200px]" : "h-[600px]";
 
   return (
     <section

@@ -51,14 +51,13 @@ const App = () => {
         {/* Video Background */}
          <Section
           backgroundType="video"
-          backgroundContent="https://www.w3schools.com/html/mov_bbb.mp4">
+          backgroundContent="https://www.saraiattoria.com/video/home/large/apple-pie-jhula.mp4">
           <h3 className="text-3xl font-normal">Video Background</h3>
           <p>Enjoy the cinematic feel!</p>
         </Section>
 
         {/* Image Background */}
-         <Section
-          backgroundType="image"
+         <Section backgroundType="image"
           backgroundContent="https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I">
           <h3 className="text-3xl font-normal">Image Background</h3>
           <p>Stunning visuals!</p>
