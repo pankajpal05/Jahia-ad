@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SectionContainer = ({ backgroundType, backgroundContent, children }) => {
+const SectionContainer = ({ backgroundType, backgroundContent, heightClass, children }) => {
   // Function to render the background based on the type
   const renderBackground = () => {
     switch (backgroundType) {
@@ -14,14 +14,15 @@ const SectionContainer = ({ backgroundType, backgroundContent, children }) => {
         );
       case "image":
         return (
-          <div className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
-            style={{ backgroundImage: `url(${backgroundContent})` }}
-          ></div>
+          <img src={backgroundContent} className="absolute inset-0 w-full z-0" alt="" height={`${heightClass}px`}
+          >
+          </img>
         );
       case "parallax":
         return (
-          <div className="absolute inset-0 w-full h-full bg-fixed bg-cover bg-center z-0"
-            style={{ backgroundImage: `url(${backgroundContent})` }}
+          <div
+            className="absolute inset-0 w-full h-full bg-fixed bg-cover bg-center z-0"
+            style={{ backgroundImage: `url(${backgroundContent})` }} height={`${heightClass}px`}
           ></div>
         );
       case "blank":
@@ -30,24 +31,12 @@ const SectionContainer = ({ backgroundType, backgroundContent, children }) => {
     }
   };
 
-  // Adjust the section height for parallax backgrounds
-  const sectionHeight =
-    backgroundType === "parallax"
-      ? "h-[1200px]"
-      : backgroundType === "blank"
-      ? ""
-      : "h-[500px]";
-
-  const sectionClasses = `w-full responsivegrid ${sectionHeight} flex items-center justify-center ${
-    backgroundType !== "blank" ? "relative overflow-hidden " : ""
-  }`;
-
   return (
-    <section className={sectionClasses}>
+    <section className="py-12 first-of-type:pt-0">
       {/* Background Layer */}
       {renderBackground()}
       {/* Foreground Content */}
-      <div className="cmp-container z-10 p-6 text-white bg-opacity-70 bg-black rounded-lg">
+      <div className={`cmp-container z-10 p-6 text-white ${backgroundType != 'blank' ? 'relative' :''}`}>
         {children}
       </div>
     </section>
@@ -58,11 +47,14 @@ const SectionContainer = ({ backgroundType, backgroundContent, children }) => {
 SectionContainer.propTypes = {
   backgroundType: PropTypes.oneOf(["video", "image", "parallax", "blank"]).isRequired,
   backgroundContent: PropTypes.string,
+  heightClass: PropTypes.string,
   children: PropTypes.node,
 };
 
 SectionContainer.defaultProps = {
+  backgroundType: "blank",
   backgroundContent: "",
+  heightClass: "",
 };
 
 export default SectionContainer;

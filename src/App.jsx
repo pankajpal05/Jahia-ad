@@ -10,6 +10,7 @@ import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
 import TestimonialCard from "./components/TestimonialCard";
 import SectionContainer from "./components/SectionContainer";
+import Index from "./pages";
 
 const App = () => {
   const testimonials = [
@@ -46,37 +47,36 @@ const App = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h2 className="text-4xl font-normal text-blue-500">Hello, AD Website</h2>
-        {/* Video Background */}
-         <SectionContainer
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Index />
+         {/* <SectionContainer
           backgroundType="video"
-          backgroundContent="https://www.saraiattoria.com/video/home/large/apple-pie-jhula.mp4">
+          backgroundContent="https://www.saraiattoria.com/video/home/large/apple-pie-jhula.mp4"
+          heightClass="500">
           <h3 className="text-3xl font-normal">Video Background</h3>
           <p>Enjoy the cinematic feel!</p>
         </SectionContainer>
 
-        {/* Image Background */}
          <SectionContainer backgroundType="image"
-          backgroundContent="https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I">
+          backgroundContent="https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I"
+          heightClass="500">
           <h3 className="text-3xl font-normal">Image Background</h3>
           <p>Stunning visuals!</p>
         </SectionContainer>
 
-        {/* Parallax Background */}
         <SectionContainer backgroundType="parallax"
-            backgroundContent="https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?dpr=2&auto=compress,format&crop=entropy&fit=crop&w=1199&h=799&q=80">
+            backgroundContent="https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?dpr=2&auto=compress,format&crop=entropy&fit=crop&w=1199&h=799&q=80"
+            heightClass="1200">
             <h3 className="text-3xl font-normal">Parallax Background</h3>
             <p>Scroll to see the parallax effect!</p>
         </SectionContainer>
 
-        {/* Blank Background */}
-        <SectionContainer backgroundType="blank">
+        <SectionContainer backgroundType="blank"
+        heightClass="">
           <h3 className="text-3xl font-normal">Blank Background</h3>
           <p>Minimalistic and clean!</p>
         </SectionContainer>
 
-        {/* Start Testimonial Component */}
         <h2 className="font-normal text-4xl">Success stories / Testimonial</h2>
         <p className="font-extrabold my-5">Extrabold font weight</p>
         <Swiper
@@ -110,7 +110,7 @@ const App = () => {
               />
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
     </div>
   );
 };

@@ -3,6 +3,13 @@
   margin: 0;
   padding: 0;
 }
+
+img{
+  object-fit: cover;
+  width: 100%;
+  height: revert-layer;
+}
+
 .mySwiper{
   padding: 5px;
 }
