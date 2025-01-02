@@ -22,29 +22,31 @@ const App = () => {
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/238/200/300", 
+      image: "https://picsum.photos/id/238/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/239/200/300", 
+      image: "https://picsum.photos/id/239/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/259/200/300", 
+      image: "https://picsum.photos/id/259/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/249/200/300", 
+      image: "https://picsum.photos/id/249/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/289/200/300", 
+      image: "https://picsum.photos/id/289/200/300",
     },
   ];
+
+  const navItems = ["Home", "About", "Services", "Contact"];
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
