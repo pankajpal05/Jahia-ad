@@ -9,7 +9,7 @@ import "./App.css";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
 import TestimonialCard from "./components/TestimonialCard";
-import Section from "./components/Section";
+import SectionContainer from "./components/SectionContainer";
 
 const App = () => {
   const testimonials = [
@@ -49,32 +49,32 @@ const App = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <h2 className="text-4xl font-normal text-blue-500">Hello, AD Website</h2>
         {/* Video Background */}
-         <Section
+         <SectionContainer
           backgroundType="video"
           backgroundContent="https://www.saraiattoria.com/video/home/large/apple-pie-jhula.mp4">
           <h3 className="text-3xl font-normal">Video Background</h3>
           <p>Enjoy the cinematic feel!</p>
-        </Section>
+        </SectionContainer>
 
         {/* Image Background */}
-         <Section backgroundType="image"
+         <SectionContainer backgroundType="image"
           backgroundContent="https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I">
           <h3 className="text-3xl font-normal">Image Background</h3>
           <p>Stunning visuals!</p>
-        </Section>
+        </SectionContainer>
 
         {/* Parallax Background */}
-        <Section backgroundType="parallax"
+        <SectionContainer backgroundType="parallax"
             backgroundContent="https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?dpr=2&auto=compress,format&crop=entropy&fit=crop&w=1199&h=799&q=80">
             <h3 className="text-3xl font-normal">Parallax Background</h3>
             <p>Scroll to see the parallax effect!</p>
-        </Section>
+        </SectionContainer>
 
         {/* Blank Background */}
-        <Section backgroundType="blank">
+        <SectionContainer backgroundType="blank">
           <h3 className="text-3xl font-normal">Blank Background</h3>
           <p>Minimalistic and clean!</p>
-        </Section>
+        </SectionContainer>
 
         {/* Start Testimonial Component */}
         <h2 className="font-normal text-4xl">Success stories / Testimonial</h2>
