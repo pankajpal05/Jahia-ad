@@ -6,11 +6,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import Header from '../components/Header';
 import TestimonialCard from "../components/TestimonialCard";
 import SectionContainer from "../components/SectionContainer";
 import Hero from "../components/Hero";
 
 const Index = ()=>{
+
+    const navItems = ["Home", "About", "Services", "Contact"];
 
     const testimonials = [
         {
@@ -46,6 +49,7 @@ const Index = ()=>{
       ];
     return (
       <>
+        <Header links={navItems} />
         <SectionContainer backgroundType="" backgroundContent="" heightClass="">
           <Hero
             title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
@@ -97,7 +101,7 @@ const Index = ()=>{
           </Swiper>
         </SectionContainer>
         <SectionContainer backgroundType="" backgroundContent="" heightClass="">
-            
+
         </SectionContainer>
       </>
     );
