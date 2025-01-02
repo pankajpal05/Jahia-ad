@@ -9,6 +9,7 @@ import "./App.css";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
 import TestimonialCard from "./components/TestimonialCard";
+import Header from "./components/Header";
 
 const App = () => {
   const testimonials = [
@@ -20,34 +21,38 @@ const App = () => {
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/238/200/300", 
+      image: "https://picsum.photos/id/238/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/239/200/300", 
+      image: "https://picsum.photos/id/239/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/259/200/300", 
+      image: "https://picsum.photos/id/259/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/249/200/300", 
+      image: "https://picsum.photos/id/249/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/289/200/300", 
+      image: "https://picsum.photos/id/289/200/300",
     },
   ];
+
+  const navItems = ["Home", "About", "Services", "Contact"];
 
   return (
     <>
       <p className="font-extrabold my-5">Extrabold font weight</p>
-
+      <Header links={navItems} />
+      <div className="min-h-screen"></div>
+     
       <Swiper
         keyboard={{
           enabled: true,
