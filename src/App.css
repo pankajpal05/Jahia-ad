@@ -21,7 +21,7 @@ img{
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@ img{
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ffff; /* Tomato color */
+  color: rgb(71, 71, 71); /* Tomato color */
   font-size: 18px; /* Reduce font size of arrows */
   width: 30px;
   height: 30px;

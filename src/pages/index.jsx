@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 
 import TestimonialCard from "../components/TestimonialCard";
 import SectionContainer from "../components/SectionContainer";
+import Hero from "../components/Hero";
 
 const Index = ()=>{
 
@@ -45,17 +46,21 @@ const Index = ()=>{
       ];
     return (
       <>
-      <SectionContainer 
-      backgroundType="image"
-      backgroundContent="https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I"
-      heightClass="400">
-        <h2 className="text-4xl font-bold">Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions </h2>
-        <p>At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era.</p>
-        <a>Get Started ButtonButtonButton</a>
-      </SectionContainer>
-        {/* <SectionContainer
-        backgroundType="blank">
-          <h2 className="font-normal text-4xl">
+        <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+          <Hero
+            title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
+            subtitle="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
+            description=""
+            ctaText="Get Started"
+            ctaLink="#"
+            backgroundType="video"
+            backgroundContent="./sarai-at-toria-apple-pie-bonfire.mp4"
+            theme="dark"
+            alignment="start"
+          />
+        </SectionContainer>
+        <SectionContainer backgroundType="blank">
+          <h2 className="font-normal text-4xl text-center mb-6">
             Success stories / Testimonial
           </h2>
           <Swiper
@@ -90,7 +95,10 @@ const Index = ()=>{
               </SwiperSlide>
             ))}
           </Swiper>
-        </SectionContainer> */}
+        </SectionContainer>
+        <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+            
+        </SectionContainer>
       </>
     );
 }

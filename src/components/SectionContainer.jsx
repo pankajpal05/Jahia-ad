@@ -32,11 +32,11 @@ const SectionContainer = ({ backgroundType, backgroundContent, heightClass, chil
   };
 
   return (
-    <section className="py-12 first-of-type:pt-0">
+    <section className="py-12 first-of-type:pt-0 w-full">
       {/* Background Layer */}
       {renderBackground()}
       {/* Foreground Content */}
-      <div className={`cmp-container z-10 p-6 text-white ${backgroundType != 'blank' ? 'relative' :''}`}>
+      <div className={`cmp-container z-10 text-gray-900 ${backgroundType != 'blank' ? 'relative' :''}`}>
         {children}
       </div>
     </section>
