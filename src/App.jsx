@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <>
-      <p className="font-extrabold my-5">Extrabold font weight</p>
+      
 
       <Swiper
         keyboard={{
@@ -81,7 +81,7 @@ const App = () => {
             />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> 
       <Footer/>
     </>
   );

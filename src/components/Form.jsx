@@ -26,7 +26,7 @@ const Form = ({ showForm, setShowForm }) => {
       newErrors.email = "Invalid email address.";
     }
 
-    if (!/^(\+\d{1,3}[- ]?)?\d{10}$/.test(formData.contact)) {
+    if (!/^(\s*|(\+\d{1,3}[- ]?)?\d{10})$/.test(formData.contact)) {
       newErrors.contact = "Contact must be 10-15 digits long.";
     }
 
@@ -42,7 +42,7 @@ const Form = ({ showForm, setShowForm }) => {
     e.preventDefault();
     if (validate()) {
       console.log("Form Data:", formData);
-      setShowForm(false); 
+      setShowForm(false);
     }
   };
 
@@ -50,10 +50,16 @@ const Form = ({ showForm, setShowForm }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+      <div className="bg-white p-6 shadow-lg w-96 md:w-1/2 relative">
+      <button
+          onClick={() => setShowForm(false)}
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        >
+          <i className="fa-solid fa-x"></i>
+        </button>
         <h2 className="text-xl font-bold mb-4">Contact Us</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+        <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
+          <div className="mb-4 sm:col-span-1">
             <label className="block text-gray-700 mb-1" htmlFor="name">
               Name
             </label>
@@ -68,7 +74,7 @@ const Form = ({ showForm, setShowForm }) => {
             />
             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
           </div>
-          <div className="mb-4">
+          <div className="mb-4 sm:col-span-1">
             <label className="block text-gray-700 mb-1" htmlFor="email">
               Email
             </label>
@@ -83,7 +89,7 @@ const Form = ({ showForm, setShowForm }) => {
             />
             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
           </div>
-          <div className="mb-4">
+          <div className="mb-4 sm:col-span-1">
             <label className="block text-gray-700 mb-1" htmlFor="contact">
               Contact
             </label>
@@ -94,13 +100,35 @@ const Form = ({ showForm, setShowForm }) => {
               value={formData.contact}
               onChange={handleChange}
               className="w-full px-3 py-2 border focus:outline-none focus:ring focus:ring-blue-200"
-              required
+              
             />
             {errors.contact && (
               <p className="text-red-500 text-sm">{errors.contact}</p>
             )}
           </div>
-          <div className="mb-4">
+          <div className="mb-4 sm:col-span-1">
+            <label className="block text-gray-700 mb-1" htmlFor="category">
+              Category
+            </label>
+            <select
+              id="category"
+              name="category"
+              value={formData.category}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border focus:outline-none focus:ring focus:ring-blue-200"
+              required
+            >
+              <option value="" selected>
+                Select a category
+              </option>
+              <option value="general">general</option>
+             
+            </select>
+            {errors.category && (
+              <p className="text-red-500 text-sm">{errors.category}</p>
+            )}
+          </div>
+          <div className="mb-4 sm:col-span-2">
             <label className="block text-gray-700 mb-1" htmlFor="enquiry">
               Enquiry Message
             </label>
@@ -117,14 +145,9 @@ const Form = ({ showForm, setShowForm }) => {
               <p className="text-red-500 text-sm">{errors.enquiry}</p>
             )}
           </div>
-          <div className="flex justify-end">
-            <button
-              type="button"
-              onClick={() => setShowForm(false)}
-              className="bg-gray-300 text-gray-700 px-4 py-2 mr-2 hover:bg-gray-400"
-            >
-              Cancel
-            </button>
+          
+          <div className="flex justify-end sm:col-span-2">
+            
             <button
               type="submit"
               className="bg-black text-white px-4 py-2 hover:bg-black"
