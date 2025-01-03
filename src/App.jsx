@@ -9,6 +9,7 @@ import "./App.css";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
 import TestimonialCard from "./components/TestimonialCard";
+import Accordion from "./components/Accordion";
 
 const App = () => {
   const testimonials = [
@@ -20,34 +21,49 @@ const App = () => {
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/238/200/300", 
+      image: "https://picsum.photos/id/238/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/239/200/300", 
+      image: "https://picsum.photos/id/239/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/259/200/300", 
+      image: "https://picsum.photos/id/259/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/249/200/300", 
+      image: "https://picsum.photos/id/249/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/289/200/300", 
+      image: "https://picsum.photos/id/289/200/300",
+    },
+  ];
+
+  const AccordianItems = [
+    {
+      title: "What is React?",
+      content: "React is a JavaScript library for building user interfaces.",
+    },
+    {
+      title: "What is Next.js?",
+      content: "Next.js is a React framework for production.",
+    },
+    {
+      title: "Why use Next.js?",
+      content: "Next.js provides features like SSR, SSG, and API routes.",
     },
   ];
 
   return (
     <>
       <p className="font-extrabold my-5">Extrabold font weight</p>
-
+      <Accordion singleOpen={false} showToggle={false}/>
       <Swiper
         keyboard={{
           enabled: true,
