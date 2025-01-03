@@ -2,6 +2,7 @@
 // import required modules
 import "./App.css";
 import Index from "./pages";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App = () => {
 

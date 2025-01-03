@@ -15,6 +15,7 @@ export default {
         body: "#000000",
         light: "#f8f9fa",
         white: "#ffffff",
+        grey:"#757574",
       },
       fontSize: {
         xs: "0.75rem", // 12px
