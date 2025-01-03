@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import clsx from 'clsx';
 
 const CTA = ({
     ctaText,
@@ -34,7 +33,7 @@ const CTA = ({
           href={ctaLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={clsx(baseClasses, sizeClasses, `text-${alignment} bg-${ctaStyle} text-white hover:bg-${ctaStyle}_dark`, bgColor)}
+          className={`${baseClasses} ${sizeClasses} text-${alignment} bg-${ctaStyle} text-white hover:bg-${ctaStyle}_dark ${bgColor}`}
           aria-label={ariaLabel}
           role="button"
         >

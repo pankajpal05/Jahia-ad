@@ -79,68 +79,72 @@ const Index = ()=>{
             alignment="start"
           />
         </SectionContainer>
-        <SectionContainer backgroundType="blank">
-          <h2 className="font-normal text-4xl text-center mb-6">
-            Success stories / Testimonial
-          </h2>
-          <Swiper
-            keyboard={{
-              enabled: true,
-            }}
-            breakpoints={{
-              425: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-            }}
-            navigation={true}
-            modules={[Keyboard, Pagination, Navigation]}
-            className="mySwiper"
-          >
-            {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <TestimonialCard
-                  title={testimonial.title}
-                  description={testimonial.description}
-                  image={testimonial.image}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </SectionContainer>
-        <SectionContainer backgroundType="" backgroundContent="" heightClass="">
-        <h2 className="font-normal text-4xl text-center mb-6">
-           Teaser V2
-          </h2>
-        {testimonials.slice(0,2).map((testimonial, index) => (
-                <TeaserV2 key={index}
-                preTitle={testimonial.preTitle}
-                title={testimonial.title}
-                image={testimonial.image}
-                callToAction={testimonial.callToAction}
-                />
-            ))}
-        </SectionContainer>
-        <SectionContainer backgroundType="" backgroundContent="" heightClass="">
-        <h2 className="font-normal text-4xl text-center mb-6">
-            Full Width Teaser as banner
-        </h2>
-        {testimonials.slice(0,1).map((testimonial, index) => (
-                <Teaser key={index}
-                title={testimonial.title}
-                description={testimonial.description}
-                callToAction={testimonial.callToAction}
-                />
-            ))}
-        </SectionContainer>
+        <div className="">
+            <SectionContainer backgroundType="blank">
+            <h2 className="font-normal text-4xl text-center mb-6">
+                Success stories / Testimonial
+            </h2>
+            <Swiper
+                keyboard={{
+                enabled: true,
+                }}
+                breakpoints={{
+                425: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                }}
+                navigation={true}
+                modules={[Keyboard, Pagination, Navigation]}
+                className="mySwiper"
+            >
+                {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                    <TestimonialCard
+                    title={testimonial.title}
+                    description={testimonial.description}
+                    image={testimonial.image}
+                    />
+                </SwiperSlide>
+                ))}
+            </Swiper>
+            </SectionContainer>
+            <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+            <h2 className="font-normal text-4xl text-center mb-6">
+            Teaser V2
+            </h2>
+            <div className="grid grid-cols-[50%,50%]">
+                {testimonials.slice(2,4).map((testimonial, index) => (
+                        <TeaserV2 key={index}
+                        preTitle={testimonial.preTitle}
+                        title={testimonial.title}
+                        image={testimonial.image}
+                        callToAction={testimonial.callToAction}
+                        />
+                    ))}
+            </div>
+            </SectionContainer>
+            <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+            <h2 className="font-normal text-4xl text-center mb-6">
+                Full Width Teaser as banner
+            </h2>
+            {testimonials.slice(0,1).map((testimonial, index) => (
+                    <Teaser key={index}
+                    title={testimonial.title}
+                    description={testimonial.description}
+                    callToAction={testimonial.callToAction}
+                    />
+                ))}
+            </SectionContainer>
+        </div>
         <Footer/>
       </>
     );
