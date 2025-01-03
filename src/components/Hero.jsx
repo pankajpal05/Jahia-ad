@@ -60,7 +60,13 @@ const Hero = ({
         <CTA 
             ctaText="Get Started"
             ctaLink="#"
-            alignment="left"
+            alignment="start"
+            ctaStyle=""
+            size=""
+            icon=""
+            iconPosition=""
+            bgColor=""
+            ariaLabel=""
         />
       </div>
     </div>

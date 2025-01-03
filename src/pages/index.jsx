@@ -11,6 +11,7 @@ import TestimonialCard from "../components/TestimonialCard";
 import SectionContainer from "../components/SectionContainer";
 import Hero from "../components/Hero";
 import TeaserV2 from "../components/TeaserV2";
+import Teaser from "../components/Teaser";
 
 const Index = ()=>{
 
@@ -114,11 +115,26 @@ const Index = ()=>{
           </Swiper>
         </SectionContainer>
         <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+        <h2 className="font-normal text-4xl text-center mb-6">
+           Teaser V2
+          </h2>
         {testimonials.slice(0,2).map((testimonial, index) => (
                 <TeaserV2 key={index}
                 preTitle={testimonial.preTitle}
                 title={testimonial.title}
                 image={testimonial.image}
+                callToAction={testimonial.callToAction}
+                />
+            ))}
+        </SectionContainer>
+        <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+        <h2 className="font-normal text-4xl text-center mb-6">
+            Full Width Teaser as banner
+        </h2>
+        {testimonials.slice(0,1).map((testimonial, index) => (
+                <Teaser key={index}
+                title={testimonial.title}
+                description={testimonial.description}
                 callToAction={testimonial.callToAction}
                 />
             ))}
