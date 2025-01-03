@@ -10,6 +10,7 @@ import Header from '../components/Header';
 import TestimonialCard from "../components/TestimonialCard";
 import SectionContainer from "../components/SectionContainer";
 import Hero from "../components/Hero";
+import TeaserV2 from "../components/TeaserV2";
 
 const Index = ()=>{
 
@@ -17,34 +18,46 @@ const Index = ()=>{
 
     const testimonials = [
         {
+          preTitle: "Special Offer",
           title: "Great Service",
           description: "The service was excellent and exceeded expectations.",
-          image: "https://picsum.photos/id/237/200/300", // Replace with actual image URL
+          image: "https://picsum.photos/id/237/200/300",
+          callToAction: "Shop Now",
         },
         {
+          preTitle: "Special Offer",
           title: "Amazing Experience",
           description: "I had an amazing experience, highly recommended!",
           image: "https://picsum.photos/id/238/200/300", 
+          callToAction: "Shop Now",
         },
         {
+          preTitle: "Special Offer",
           title: "Amazing Experience",
           description: "I had an amazing experience, highly recommended!",
           image: "https://picsum.photos/id/239/200/300", 
+          callToAction: "Shop Now",
         },
         {
+          preTitle: "Special Offer",
           title: "Amazing Experience",
           description: "I had an amazing experience, highly recommended!",
           image: "https://picsum.photos/id/259/200/300", 
+          callToAction: "Shop Now",
         },
         {
+          preTitle: "Special Offer",
           title: "Amazing Experience",
           description: "I had an amazing experience, highly recommended!",
           image: "https://picsum.photos/id/249/200/300", 
+          callToAction: "Shop Now",
         },
         {
+          preTitle: "Special Offer",
           title: "Amazing Experience",
           description: "I had an amazing experience, highly recommended!",
           image: "https://picsum.photos/id/289/200/300", 
+          callToAction: "Shop Now",
         },
       ];
     return (
@@ -101,7 +114,14 @@ const Index = ()=>{
           </Swiper>
         </SectionContainer>
         <SectionContainer backgroundType="" backgroundContent="" heightClass="">
-
+        {testimonials.slice(0,2).map((testimonial, index) => (
+                <TeaserV2 key={index}
+                preTitle={testimonial.preTitle}
+                title={testimonial.title}
+                image={testimonial.image}
+                callToAction={testimonial.callToAction}
+                />
+            ))}
         </SectionContainer>
       </>
     );

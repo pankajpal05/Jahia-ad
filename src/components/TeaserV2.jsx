@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const TeaserV2 = (props) => {
-  const { preTitle, title, imgUrl, callToAction } = props;
+  const { preTitle, title, image, callToAction } = props;
 
   return (
-    <div
-      className="teaser flex-1 object-contain bg-no-repeat bg-cover"
+    <div className="teaser flex-1 object-contain bg-no-repeat bg-cover"
       style={{
-        backgroundImage: `url(${imgUrl})`,
+        backgroundImage: `url(${image})`,
       }}
       role="region"
       aria-labelledby="teaser-title"
