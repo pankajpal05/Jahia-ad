@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,6 +13,7 @@ import SectionContainer from "../components/SectionContainer";
 import Hero from "../components/Hero";
 import TeaserV2 from "../components/TeaserV2";
 import Teaser from "../components/Teaser";
+import Footer from "../components/Footer";
 
 const Index = ()=>{
 
@@ -139,6 +141,7 @@ const Index = ()=>{
                 />
             ))}
         </SectionContainer>
+        <Footer/>
       </>
     );
 }
