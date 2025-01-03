@@ -2,7 +2,7 @@
 const TestimonialCard = ({ title, description, image }) => {
   return (
     <div
-      className="relative w-full sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden shadow-lg group"
+      className="relative w-full sm:w-80 md:w-full h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden shadow-lg group"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
