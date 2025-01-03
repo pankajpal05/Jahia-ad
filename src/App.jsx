@@ -10,6 +10,8 @@ import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
 import TestimonialCard from "./components/TestimonialCard";
 
+import Header from "./components/Header";
+
 const App = () => {
   const testimonials = [
     {
@@ -46,8 +48,8 @@ const App = () => {
 
   return (
     <>
+    <Header/>
       <p className="font-extrabold my-5">Extrabold font weight</p>
-
       <Swiper
         keyboard={{
           enabled: true,
