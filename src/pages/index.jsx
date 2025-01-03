@@ -79,7 +79,7 @@ const Index = ()=>{
             alignment="start"
           />
         </SectionContainer>
-        <div className="">
+        <div className="lg:max-w-[1240px] w-full mx-auto">
             <SectionContainer backgroundType="blank">
             <h2 className="font-normal text-4xl text-center mb-6">
                 Success stories / Testimonial

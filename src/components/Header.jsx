@@ -10,7 +10,7 @@ const Header = ({ links }) => {
 
   return (
     <header className="navigation  fixed top-0 w-full z-50 transition-all duration-300 ease-in-out bg-gray-100 text-black">
-      <div className="flex items-center justify-between px-6 py-4 m-auto lg:max-w-[1240px]">
+      <div className="flex items-center justify-between py-4 m-auto lg:max-w-[1240px]">
         {/* Logo */}
         <div className="text-2xl font-bold text-gray-800">
           Logo
