@@ -114,7 +114,8 @@ const Index = () => {
                 <TestimonialCard
                   title={testimonial.title}
                   description={testimonial.description}
-                  image={testimonial.image}
+                  image={testimonial.image} 
+                  cta= {true}
                 />
               </SwiperSlide>
             ))}
@@ -153,6 +154,13 @@ const Index = () => {
         <TeaserV3  img = {testimonial.brandImg} description={testimonial.description}/>
       ))}
       </div> 
+      <TestimonialCard
+      title="testimonial.title"
+      description="{testimonial.description}"
+      image="https://picsum.photos/id/289/200/300"
+      cta= {true}
+      alignment="center"
+      />
       <Footer />
     </>
   );
