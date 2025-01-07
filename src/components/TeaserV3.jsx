@@ -14,7 +14,7 @@ export const TeaserV3 = ({ img, description, altText }) => {
         <img 
           src={img} 
           alt={altText} 
-          className="max-w-[180px] m-auto" 
+          className="max-w-fit m-auto" 
           tabIndex={0} 
           aria-hidden={altText ? "false" : "true"} 
         />
