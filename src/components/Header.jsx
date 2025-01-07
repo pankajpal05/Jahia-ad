@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { useLocation } from "react-router-dom";
 
 const Header = ({ links }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -32,12 +37,22 @@ const Header = ({ links }) => {
   return (
     <header
       className={`navigation fixed top-0 w-full z-50 transition-all duration-300 ease-in-out  ${
-        isScrolled ? "bg-white text-black shadow-custom-light" : "bg-transparent text-black"
+        isScrolled
+          ? "bg-white text-black shadow-custom-light"
+          : "bg-transparent text-black"
       } ${menuOpen ? "bg-gray-800 text-white" : ""}`}
     >
-      <div className={`px-4 flex items-center justify-between py-4 m-auto lg:max-w-[1240px] ${menuOpen ? "bg-gray-800 text-white" : ""} `}>
+      <div
+        className={`px-4 flex items-center justify-between py-4 m-auto lg:max-w-[1240px] ${
+          menuOpen ? "bg-gray-800 text-white" : ""
+        } `}
+      >
         {/* Logo */}
-        <div className={`text-2xl font-bold ${isScrolled ? "text-black" : "text-white"} ${menuOpen ? "text-white" : ""}`}>
+        <div
+          className={`text-2xl font-bold ${
+            isScrolled ? "text-black" : "text-white"
+          } ${menuOpen ? "text-white" : ""}`}
+        >
           Logo
         </div>
         {/* Navigation */}
@@ -52,10 +67,19 @@ const Header = ({ links }) => {
                 <li
                   key={index}
                   className={`cmp-navigation__item py-2 px-4 ml-0 md:py-0 ${
-                    isScrolled ? "text-black hover:text-gray-300" : "text-white hover:text-gray-700"
-                  } ${menuOpen ? " text-white" : ""}`}
+                    isScrolled
+                      ? "text-black hover:text-gray-300"
+                      : "text-white hover:text-gray-700"
+                  } ${menuOpen ? " text-white" : ""} ${
+                    isActive(item === "home" ? "/" : `/${item}`)
+                      ? "border-b border-white"
+                      : ""
+                  }`}
                 >
-                  <a href="/" className="cmp-navigation__item-link">
+                  <a
+                    href={item === "home" ? "/" : `/${item}`}
+                    className={`cmp-navigation__item-link capitalize`}
+                  >
                     {item}
                   </a>
                 </li>

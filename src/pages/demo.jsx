@@ -17,8 +17,8 @@ import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
 
-const Index = () => {
-  const navItems = ["home", "about", "services", "demo"];
+const Demo = () => {
+    const navItems = ["home", "about", "services", "demo"];
 
   const testimonials = [
     {
@@ -69,7 +69,6 @@ const Index = () => {
   return (
     <>
       <Header links={navItems} />
-      <SectionContainer backgroundType="" backgroundContent="" heightClass="">
         <Hero
           title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
           subtitle="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
@@ -79,11 +78,18 @@ const Index = () => {
           backgroundType="video"
           backgroundContent="./sarai-at-toria-apple-pie-bonfire.mp4"
           theme="dark"
-          alignment="start"
+          alignment="center"
         />
-      </SectionContainer>
-      <div className="lg:max-w-[1240px] w-full mx-auto">
-        <SectionContainer backgroundType="blank">
+        <SectionContainer>
+            <Heading 
+            title="Who We Are"
+            heading="Client-Centric to the bone"
+            description="We are a consulting and professional services firm dedicated to transforming how organizations engage with their audiences and manage operations in the digital realm. Our team of seasoned experts crafts robust strategies across e-Commerce, Content Management Systems (CMS), Data Engineering, and advanced Analytics, powered by AI and Generative AI. 
+
+Rooted in a deep understanding of industry challenges and global market trends, we collaborate with enterprise-level clients as well as EdTech and Government entities to enable seamless digital transformations. By merging best-in-class technology stacks and proprietary frameworks, we help you innovate, scale, and thrive in today’s rapidly evolving ecosystem."
+            />
+        </SectionContainer>
+        {/* <SectionContainer backgroundType="blank">
           <h2 className="font-normal text-4xl text-center mb-6">
             Success stories / Testimonial
           </h2>
@@ -119,8 +125,8 @@ const Index = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </SectionContainer>
-        <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+        </SectionContainer> */}
+        {/* <SectionContainer backgroundType="" backgroundContent="" heightClass="">
           <h2 className="font-normal text-4xl text-center mb-6">Teaser V2</h2>
           <div className="grid grid-cols-[50%,50%]">
             {testimonials.slice(2, 4).map((testimonial, index) => (
@@ -133,8 +139,8 @@ const Index = () => {
               />
             ))}
           </div>
-        </SectionContainer>
-        <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+        </SectionContainer> */}
+        {/* <SectionContainer backgroundType="" backgroundContent="" heightClass="">
           <h2 className="font-normal text-4xl text-center mb-6">
             Full Width Teaser as banner
           </h2>
@@ -146,16 +152,15 @@ const Index = () => {
               callToAction={testimonial.callToAction}
             />
           ))}
-        </SectionContainer>
-      </div>
-      <div className="flex justify-around flex-wrap">
+        </SectionContainer> */}
+      {/* <div className="flex justify-around flex-wrap">
       {testimonials.slice(0, 3).map((testimonial, index) => (
         <TeaserV3  img = {testimonial.brandImg} description={testimonial.description}/>
       ))}
-      </div> 
+      </div>  */}
       <Footer />
     </>
   );
 };
 
-export default Index;
+export default Demo;

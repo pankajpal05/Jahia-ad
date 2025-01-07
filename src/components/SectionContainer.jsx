@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SectionContainer = ({ backgroundType, backgroundContent, heightClass, children }) => {
+const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alignment, children }) => {
   // Function to render the background based on the type
   const renderBackground = () => {
     switch (backgroundType) {
@@ -32,7 +32,7 @@ const SectionContainer = ({ backgroundType, backgroundContent, heightClass, chil
   };
 
   return (
-    <section className="py-12 first-of-type:pt-0 w-full">
+    <section className="py-12 w-full lg:max-w-[1240px] mx-auto px-4">
       {/* Background Layer */}
       {renderBackground()}
       {/* Foreground Content */}
@@ -48,6 +48,7 @@ SectionContainer.propTypes = {
   backgroundType: PropTypes.oneOf(["video", "image", "parallax", "blank"]).isRequired,
   backgroundContent: PropTypes.string,
   heightClass: PropTypes.string,
+  alignment: PropTypes.string,
   children: PropTypes.node,
 };
 
@@ -55,6 +56,7 @@ SectionContainer.defaultProps = {
   backgroundType: "blank",
   backgroundContent: "",
   heightClass: "",
+  alignment: "center"
 };
 
 export default SectionContainer;

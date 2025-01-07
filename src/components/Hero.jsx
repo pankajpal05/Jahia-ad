@@ -52,7 +52,7 @@ const Hero = ({
 
       {/* Content */}
       <div
-        className={`relative z-10 px-6 py-12 text-${alignment} max-w-3xl ${textColor}`}
+        className={`relative lg:max-w-[1240px] mx-auto z-10 px-4 py-12 text-${alignment} max-w-3xl ${textColor}`}
       >
         <h1 className="text-3xl lg:text-4xl font-semibold mb-4">{title}</h1>
         {subtitle && <h2 className="text-xl lg:text-2xl font-normal mb-4">{subtitle}</h2>}
@@ -60,13 +60,13 @@ const Hero = ({
         <CTA 
             ctaText="Get Started"
             ctaLink="#"
-            alignment="start"
-            ctaStyle=""
-            size=""
+            alignment="center"
+            ctaStyle="primary"
+            size="md"
             icon=""
             iconPosition=""
             bgColor=""
-            ariaLabel=""
+            ariaLabel="Get Started"
         />
       </div>
     </div>
