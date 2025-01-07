@@ -14,6 +14,7 @@ import Hero from "../components/Hero";
 import TeaserV2 from "../components/TeaserV2";
 import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
+import Heading from "../components/Heading";
 
 const Index = ()=>{
 
@@ -81,9 +82,10 @@ const Index = ()=>{
         </SectionContainer>
         <div className="lg:max-w-[1240px] w-full mx-auto">
             <SectionContainer backgroundType="blank">
-            <h2 className="font-normal text-4xl text-center mb-6">
+            {/* <h2 className="font-normal text-4xl text-center mb-6">
                 Success stories / Testimonial
-            </h2>
+            </h2> */}
+            <Heading title="" heading="Success stories / Testimonial" description="" alignment="center"/>
             <Swiper
                 keyboard={{
                 enabled: true,
