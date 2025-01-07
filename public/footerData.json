@@ -1,17 +1,43 @@
 {
-    "title": "Starting a new project or want to collaborate with us?",
-   
-    "navigationLinks": [
-      { "label": "About Us", "href": "/about" },
-      { "label": "Careers", "href": "/careers" },
-      { "label": "Press", "href": "/press" },
-      { "label": "Blog", "href": "/blog" },
-      { "label": "Pricing", "href": "/pricing" }
-    ],
-    "socialLinks": [
-      { "label": "Linkedin", "href": "#" }
-     
-    ],
-    "copyrightText": "© 2024"
+  "topSection": {
+    "title": "Material Tailwind"
+  },
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "iconClass": "fab fa-linkedin fa-2x",
+      "url": "#"
+    }
+  ],
+  "sections": [
+    {
+      "title": "ABOUT",
+      "links": ["about 1", "about 2", "about 3"]
+    },
+    {
+      "title": "CAREERS",
+      "links": ["career 1", "career 2", "career 3", "career 4"]
+    },
+    {
+      "title": "BLOG",
+      "links": ["Portfolio", "Career", "Leadership Team", "Contact Us"]
+    },
+    {
+      "title": "PRICING",
+      "links": ["pricing 1", "pricing 2", "pricing 3", "pricing 4"]
+    }
+  ],
+  "bottomSection": {
+    "copyright": "© Copyright Test 2025. All Rights Reserved.",
+    "policies": [
+      {
+        "title": "Privacy Policy",
+        "url": "#"
+      },
+      {
+        "title": "Cookie Policy",
+        "url": "#"
+      }
+    ]
   }
-  
+}
