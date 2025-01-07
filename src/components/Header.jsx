@@ -72,7 +72,7 @@ const Header = ({ links }) => {
                       : "text-white hover:text-gray-700"
                   } ${menuOpen ? " text-white" : ""} ${
                     isActive(item === "home" ? "/" : `/${item}`)
-                      ? "border-b border-white"
+                      ? "lg:border-b lg:border-white"
                       : ""
                   }`}
                 >

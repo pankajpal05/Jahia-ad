@@ -17,7 +17,6 @@ img{
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -34,20 +33,6 @@ img{
 .swiper-button-next:after{
   font-size: 25px;
 }
-.swiper-button-next{
-  background-color: rgb(107, 106, 106);
-  height: 40px !important;
-  width: 40px !important;
-  border-radius: 50% !important;
- 
-}
-.swiper-button-prev{
-  background-color: rgb(107, 106, 106);
-  height: 40px !important;
-  width: 40px !important;
-  border-radius: 50% !important;
- 
-}
 .swiper-button-next,
 .swiper-button-prev {
   color: rgb(71, 71, 71); /* Tomato color */
@@ -55,7 +40,6 @@ img{
   width: 30px;
   height: 30px;
 }
-
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -64,7 +48,6 @@ img{
     height: 24px;
   }
 }
-
 @media (max-width: 480px) {
   .swiper-button-next,
   .swiper-button-prev {

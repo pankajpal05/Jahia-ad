@@ -16,6 +16,7 @@ import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
+import { CardV4 } from "../components/CardV4";
 
 const Index = () => {
   const navItems = ["home", "about", "services", "demo"];
@@ -35,14 +36,15 @@ const Index = () => {
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/238/200/300",
       callToAction: "Shop Now",
+      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/salesforce-new.webp"
     },
     {
       preTitle: "Special Offer",
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/239/200/300",
-      
       callToAction: "Shop Now",
+      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/outsystems2.webp"
     },
     {
       preTitle: "Special Offer",
@@ -50,6 +52,7 @@ const Index = () => {
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/259/200/300",
       callToAction: "Shop Now",
+      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/microsoft-logo.webp"
     },
     {
       preTitle: "Special Offer",
@@ -149,18 +152,17 @@ const Index = () => {
           ))}
         </SectionContainer>
       </div>
-      <div className="flex justify-around flex-wrap">
-      {testimonials.slice(0, 3).map((testimonial, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 mx-2 mb-5">
+      {testimonials.slice(0, 4).map((testimonial, index) => (
         <TeaserV3  img = {testimonial.brandImg} description={testimonial.description}/>
       ))}
       </div> 
-      <TestimonialCard
-      title="testimonial.title"
-      description="{testimonial.description}"
-      image="https://picsum.photos/id/289/200/300"
-      cta= {true}
-      alignment="center"
-      />
+     
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-2">
+      {testimonials.slice(0, 3).map((testimonial, index) => ( 
+      <CardV4 title={testimonial.title} description={testimonial.description} />
+     ))}
+      </div>
       <Footer />
     </>
   );
