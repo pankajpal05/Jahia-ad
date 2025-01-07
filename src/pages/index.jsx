@@ -16,6 +16,7 @@ import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
+import { CardV4 } from "../components/CardV4";
 
 const Index = () => {
   const navItems = ["Home", "About", "Services", "Contact"];
@@ -161,6 +162,11 @@ const Index = () => {
       cta= {true}
       alignment="center"
       />
+      <div className="flex lg:justify-between justify-center mx-2 flex-wrap">
+      {testimonials.slice(0, 3).map((testimonial, index) => ( 
+      <CardV4 title={testimonial.title} description={testimonial.description} />
+     ))}
+      </div>
       <Footer />
     </>
   );
