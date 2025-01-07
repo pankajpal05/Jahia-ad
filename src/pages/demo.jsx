@@ -71,8 +71,8 @@ const Demo = () => {
       <Header links={navItems} />
         <Hero
           title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
-          subtitle="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
-          description=""
+          subtitle=""
+          description="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
           ctaText="Get Started"
           ctaLink="#"
           backgroundType="video"
@@ -80,7 +80,7 @@ const Demo = () => {
           theme="dark"
           alignment="center"
         />
-        <SectionContainer>
+        <SectionContainer alignment="center">
             <Heading 
             title="Who We Are"
             heading="Client-Centric to the bone"
@@ -88,6 +88,16 @@ const Demo = () => {
 
 Rooted in a deep understanding of industry challenges and global market trends, we collaborate with enterprise-level clients as well as EdTech and Government entities to enable seamless digital transformations. By merging best-in-class technology stacks and proprietary frameworks, we help you innovate, scale, and thrive in today’s rapidly evolving ecosystem."
             />
+        </SectionContainer>
+        <Heading heading="Success Stories / Testimonials" alignment="center" />
+        <SectionContainer alignment="center" gridCols="3">
+            {testimonials.slice(0, 3).map((testimonial, index) => (
+                <TestimonialCard key={index}
+                  title={testimonial.title}
+                  description={testimonial.description}
+                  image={testimonial.image}
+                />
+            ))}
         </SectionContainer>
         {/* <SectionContainer backgroundType="blank">
           <h2 className="font-normal text-4xl text-center mb-6">

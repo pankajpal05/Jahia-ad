@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Heading = ({ title, heading, description, alignment }) => {
 
   return (
-    <div className={`mb-6 text-${alignment}`}>
+    <div className={`lg:max-w-[1240px] mx-auto px-4 mb-6 text-${alignment} w-full`}>
       {title && (
         <h5 className={`text-xs font-semibold uppercase tracking-widest text-primary`}>
           {title}
@@ -29,14 +29,14 @@ Heading.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
-  alignment: PropTypes.oneOf(["start", "center", "end"]),
+  alignment: PropTypes.oneOf(["left", "center", "right"]),
 };
 
 Heading.defaultProps = {
     title: "",
     heading: "",
     description: "",
-    alignment: "center"
+    alignment: ""
 };
 
 export default Heading;

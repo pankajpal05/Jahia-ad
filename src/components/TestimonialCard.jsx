@@ -4,7 +4,7 @@ import CTA from "./Cta";
 const TestimonialCard = ({ title, description, image,alignment , cta = false  }) => {
   return (
     <div
-      className="teaser group relative  w-full h-full rounded-lg overflow-hidden shadow-lg group"
+      className="teaser group relative sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 w-full rounded-lg overflow-hidden shadow-lg group"
       role="region"
       aria-labelledby={`card-title-${title}`}
       aria-describedby={`card-description-${title}`}
@@ -20,7 +20,7 @@ const TestimonialCard = ({ title, description, image,alignment , cta = false  })
         className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-700 group-hover:bg-opacity-70"
         aria-hidden="true"
       />
-      <div className={` cmp-teaser__content  text-${alignment}   relative z-10 p-4 md:p-5 flex flex-col justify-end h-full `}>
+      <div className={`cmp-teaser__content text-${alignment} relative z-10 p-4 md:p-5 flex flex-col justify-end h-full `}>
         <h3
           id={`card-title-${title}`}
           className="cmp-teaser__title text-lg sm:text-xl md:text-2xl font-semibold text-white mb-1 sm:mb-2"
