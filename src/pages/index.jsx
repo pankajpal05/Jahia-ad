@@ -1,22 +1,22 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import Header from '../components/Header';
+import Header from "../components/Header";
 import TestimonialCard from "../components/TestimonialCard";
 import SectionContainer from "../components/SectionContainer";
 import Hero from "../components/Hero";
 import TeaserV2 from "../components/TeaserV2";
 import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
+import { TeaserV3 } from "../components/TeaserV3";
 
 const Index = () => {
-
   const navItems = ["Home", "About", "Services", "Contact"];
 
   const testimonials = [
@@ -26,6 +26,7 @@ const Index = () => {
       description: "The service was excellent and exceeded expectations.",
       image: "https://picsum.photos/id/237/200/300",
       callToAction: "Shop Now",
+      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
     },
     {
       preTitle: "Special Offer",
@@ -39,6 +40,7 @@ const Index = () => {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/239/200/300",
+      
       callToAction: "Shop Now",
     },
     {
@@ -112,19 +114,17 @@ const Index = () => {
                   title={testimonial.title}
                   description={testimonial.description}
                   image={testimonial.image}
-                  cta={true}
                 />
               </SwiperSlide>
             ))}
           </Swiper>
         </SectionContainer>
         <SectionContainer backgroundType="" backgroundContent="" heightClass="">
-          <h2 className="font-normal text-4xl text-center mb-6">
-            Teaser V2
-          </h2>
+          <h2 className="font-normal text-4xl text-center mb-6">Teaser V2</h2>
           <div className="grid grid-cols-[50%,50%]">
             {testimonials.slice(2, 4).map((testimonial, index) => (
-              <TeaserV2 key={index}
+              <TeaserV2
+                key={index}
                 preTitle={testimonial.preTitle}
                 title={testimonial.title}
                 image={testimonial.image}
@@ -138,7 +138,8 @@ const Index = () => {
             Full Width Teaser as banner
           </h2>
           {testimonials.slice(0, 1).map((testimonial, index) => (
-            <Teaser key={index}
+            <Teaser
+              key={index}
               title={testimonial.title}
               description={testimonial.description}
               callToAction={testimonial.callToAction}
@@ -146,14 +147,14 @@ const Index = () => {
           ))}
         </SectionContainer>
       </div>
-
-      {testimonials.slice(2, 3).map((testimonial, index) => (
-
-        <TestimonialCard title={testimonial.title}  description={testimonial.description} image={testimonial.image} cta={true} />
+      <div className="flex justify-around flex-wrap">
+      {testimonials.slice(0, 3).map((testimonial, index) => (
+        <TeaserV3  img = {testimonial.brandImg} description={testimonial.description}/>
       ))}
+      </div> 
       <Footer />
     </>
   );
-}
+};
 
 export default Index;
