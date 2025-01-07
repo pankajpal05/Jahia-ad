@@ -15,6 +15,7 @@ import TeaserV2 from "../components/TeaserV2";
 import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
+import Heading from "../components/Heading";
 
 const Index = () => {
   const navItems = ["Home", "About", "Services", "Contact"];
