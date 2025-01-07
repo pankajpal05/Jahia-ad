@@ -48,8 +48,7 @@ const App = () => {
 
   return (
     <>
-      
-
+  
       <Swiper
         keyboard={{
           enabled: true,
@@ -70,7 +69,7 @@ const App = () => {
         }}
         navigation={true}
         modules={[Keyboard, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper "
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
@@ -82,6 +81,8 @@ const App = () => {
           </SwiperSlide>
         ))}
       </Swiper> 
+      
+      
       <Footer/>
     </>
   );
