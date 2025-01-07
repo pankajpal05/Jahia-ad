@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alignment, children }) => {
+const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alignment, gridCols, children }) => {
   // Function to render the background based on the type
   const renderBackground = () => {
     switch (backgroundType) {
@@ -32,11 +32,11 @@ const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alig
   };
 
   return (
-    <section className="py-12 w-full lg:max-w-[1240px] mx-auto px-4">
+    <section className={`py-12 w-full lg:max-w-[1240px] mx-auto px-4 text-${alignment}`}>
       {/* Background Layer */}
       {renderBackground()}
       {/* Foreground Content */}
-      <div className={`cmp-container z-10 text-gray-900 ${backgroundType != 'blank' ? 'relative' :''}`}>
+      <div className={`${gridCols ? `grid grid-cols-1 lg:grid-cols-${gridCols} gap-4 ` : ""} cmp-container z-10 text-gray-900 ${backgroundType != 'blank' ? 'relative' :''}`}>
         {children}
       </div>
     </section>
@@ -49,6 +49,7 @@ SectionContainer.propTypes = {
   backgroundContent: PropTypes.string,
   heightClass: PropTypes.string,
   alignment: PropTypes.string,
+  gridCols: PropTypes.string,
   children: PropTypes.node,
 };
 

@@ -49,12 +49,12 @@ const Hero = ({
     <div className={`relative w-full h-screen flex items-center justify-${alignment} overflow-hidden`}>
       {/* Background */}
       {renderBackground()}
-
+      <div class="absolute inset-0 bg-black bg-opacity-50 z-1"></div>
       {/* Content */}
       <div
         className={`relative lg:max-w-[1240px] mx-auto z-10 px-4 py-12 text-${alignment} max-w-3xl ${textColor}`}
       >
-        <h1 className="text-3xl lg:text-4xl font-semibold mb-4">{title}</h1>
+        {title && <h1 className="text-3xl lg:text-4xl font-semibold mb-4">{title}</h1>}
         {subtitle && <h2 className="text-xl lg:text-2xl font-normal mb-4">{subtitle}</h2>}
         {description && <p className="text-lg mb-6">{description}</p>}
         <CTA 
