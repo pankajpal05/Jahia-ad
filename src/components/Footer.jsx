@@ -19,14 +19,14 @@ const Footer = () => {
 
   return (
     <footer className="pt-16">
-      <div className=" md:h-[400px] lg:h-[250px]">
+      <div className=" md:h-[400px] lg:h-[250px] px-4">
       <Form />
       </div>
       <div className="md:pt-[350px] lg:pt-[250px] bg-[#1A1A1A] text-white py-10">
-        <div className="container mx-auto px-4">
+        <div className="lg:max-w-[1240px] mx-auto px-4">
           {/* Top Section */}
           <div className="flex flex-wrap justify-between items-center border-y border-gray-700 ">
-            <div className="flex items-center space-x-4 py-6">
+            <div className="flex items-center space-x-4 py-6 text-2xl font-bold text-white">
               {footerData.topSection.title}
             </div>
           </div>
@@ -39,7 +39,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={link.url}
-                    className="hover:text-gray-400"
+                    className="hover:text-gray-400 cursor-pointer"
                   >
                     <i className={link.iconClass}></i>
                   </a>
@@ -54,7 +54,7 @@ const Footer = () => {
                   </h3>
                   <ul>
                     {section.links.map((link, linkIndex) => (
-                      <li key={linkIndex} className=" h-11 py-2">
+                      <li key={linkIndex} className=" h-11 py-2 cursor-pointer">
                         {link}
                       </li>
                     ))}

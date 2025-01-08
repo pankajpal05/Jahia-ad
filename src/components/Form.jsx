@@ -86,7 +86,7 @@ const Form = () => {
   };
 
   return (
-    <div className="w-full shadow-lg flex items-center justify-center">
+    <div className="w-full flex items-center justify-center">
       <div className="bg-white p-6 shadow-lg w-11/12 lg:max-w-[1240px] flex flex-col lg:flex-row md:justify-between py-6 md:py-14 md:px-14 lg:px-14">
         <div className="mb-10 w-full lg:w-[40%]">
           <div className="mb-11">
