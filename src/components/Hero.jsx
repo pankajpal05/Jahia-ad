@@ -46,7 +46,7 @@ const Hero = ({
   const textColor = theme === "dark" ? "text-white" : "text-gray-800";
 
   return (
-    <div className={`relative w-full h-screen flex items-center justify-${alignment} overflow-hidden`}>
+    <div className={`relative w-full h-screen flex items-center justify-${alignment} overflow-hidden mb-12`}>
       {/* Background */}
       {renderBackground()}
       <div class="absolute inset-0 bg-black bg-opacity-50 z-1"></div>

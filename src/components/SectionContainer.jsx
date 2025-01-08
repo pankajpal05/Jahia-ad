@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Heading from "./Heading";
 
-const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alignment, gridCols, children }) => {
+const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alignment, gridCols, isHeading, heading, children }) => {
   // Function to render the background based on the type
   const renderBackground = () => {
     switch (backgroundType) {
@@ -33,6 +34,9 @@ const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alig
 
   return (
     <section className={`py-12 w-full lg:max-w-[1240px] mx-auto px-4 text-${alignment}`}>
+      {
+        isHeading && <Heading title="" heading={heading} description=""/>
+      }
       {/* Background Layer */}
       {renderBackground()}
       {/* Foreground Content */}
