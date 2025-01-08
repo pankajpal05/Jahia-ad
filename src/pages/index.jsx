@@ -72,7 +72,7 @@ const Index = () => {
   return (
     <>
       <Header links={navItems} />
-      <SectionContainer backgroundType="" backgroundContent="" heightClass="">
+      {/* <SectionContainer backgroundType="" backgroundContent="" heightClass=""> */}
         <Hero
           title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
           subtitle="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
@@ -84,7 +84,7 @@ const Index = () => {
           theme="dark"
           alignment="start"
         />
-      </SectionContainer>
+      {/* </SectionContainer> */}
       <div className="lg:max-w-[1240px] w-full mx-auto">
         <SectionContainer backgroundType="blank">
           <h2 className="font-normal text-4xl text-center mb-6">
