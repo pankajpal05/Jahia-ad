@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        'custom-light': '0px 1px 20px 0px rgba(0, 0, 0, 0.1)',
+      },
       colors: {
         muted: "#6c757d",
         primary: "#0d6efd",
@@ -15,6 +18,7 @@ export default {
         body: "#000000",
         light: "#f8f9fa",
         white: "#ffffff",
+        grey:"#757574",
       },
       fontSize: {
         xs: "0.75rem", // 12px
@@ -50,5 +54,15 @@ export default {
       },
     },
   },
+  safelist: [
+    {
+      pattern: /^grid-cols-(1|2|3|4|5|6|7|8|9|10|11|12)$/,  // added pattern to Dynamically generate grid-cols-* classes
+      variants: ['lg']
+    },
+    {
+      pattern: /^text-(left|center|right)$/, // added pattern to Dynamically generate text-* classes
+      variants: ['lg']
+    },
+  ],
   plugins: [],
 };
