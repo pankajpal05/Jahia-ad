@@ -16,6 +16,8 @@ import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
+import Nav from "../components/Nav";
+import { CardV4 } from "../components/CardV4";
 
 const Demo = () => {
     const navItems = ["home", "about", "services", "demo"];
@@ -65,6 +67,28 @@ const Demo = () => {
       image: "https://picsum.photos/id/289/200/300",
       callToAction: "Shop Now",
     },
+    {
+        preTitle: "Special Offer",
+        title: "Amazing Experience",
+        description: "I had an amazing experience, highly recommended!",
+        image: "https://picsum.photos/id/289/200/300",
+        callToAction: "Shop Now",
+        brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
+    },{
+        preTitle: "Special Offer",
+        title: "Amazing Experience",
+        description: "I had an amazing experience, highly recommended!",
+        image: "https://picsum.photos/id/289/200/300",
+        callToAction: "Shop Now",
+        brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/salesforce-new.webp",
+    },{
+        preTitle: "Special Offer",
+        title: "Amazing Experience",
+        description: "I had an amazing experience, highly recommended!",
+        image: "https://picsum.photos/id/289/200/300",
+        callToAction: "Shop Now",
+        brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/outsystems2.webp",
+    }
   ];
   return (
     <>
@@ -89,8 +113,16 @@ const Demo = () => {
 Rooted in a deep understanding of industry challenges and global market trends, we collaborate with enterprise-level clients as well as EdTech and Government entities to enable seamless digital transformations. By merging best-in-class technology stacks and proprietary frameworks, we help you innovate, scale, and thrive in today’s rapidly evolving ecosystem."
             />
         </SectionContainer>
-        <Heading heading="Success Stories / Testimonials" alignment="center" />
-        <SectionContainer alignment="center" gridCols="3">
+        <SectionContainer alignment="center" gridCols="3" isHeading="true" heading="Industries We Serve">
+            {testimonials.slice(-3).map((testimonial, index) => (
+                <TeaserV3 key={index}
+                  title={testimonial.title}
+                  description={testimonial.description}
+                  image={testimonial.brandImg}
+                />
+            ))}
+        </SectionContainer>
+        <SectionContainer alignment="center" gridCols="3" isHeading="true" heading="Success Stories / Testimonials">
             {testimonials.slice(0, 3).map((testimonial, index) => (
                 <TestimonialCard key={index}
                   title={testimonial.title}
