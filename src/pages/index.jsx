@@ -17,6 +17,7 @@ import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
 import { CardV4 } from "../components/CardV4";
+import CardV5 from "../components/CardV5";
 
 const Index = () => {
   const navItems = ["home", "about", "services", "demo"];
@@ -69,6 +70,35 @@ const Index = () => {
       callToAction: "Shop Now",
     },
   ];
+
+  const steps = [
+    {
+      title: "Discovery & Assessment",
+      description:
+        "We begin with an in-depth evaluation of your current digital environment, stakeholder needs, and overarching business objectives. Our experts identify technology gaps, process inefficiencies, and areas for AI/ML enhancements.",
+    },
+    {
+      title: "Strategy & Roadmap",
+      description:
+        "We create a customized digital transformation roadmap encompassing CMS modernization, e-Commerce storefront optimization, and data strategy. Our proposals detail cost-effective and scalable frameworks, ensuring you can adapt quickly to market shifts.",
+    },
+    {
+      title: "Solution Implementation",
+      description:
+        "Leveraging partnerships with Adobe, Jahia, Magento, and leading AI/ML tools, we build solutions that fit your specific industry and compliance requirements. Our iterative development process ensures transparency and agility throughout the engagement.",
+    },
+    {
+      title: "Optimization & Analytics",
+      description:
+        "We deploy real-time analytics and predictive AI to monitor user engagement, operational efficiency, and customer satisfaction post-launch. Continuous refinement and model training enable long-term sustainability and ROI.",
+    },
+    {
+      title: "Ongoing Support & Innovation",
+      description:
+        "From routine maintenance to the integration of emerging technologies like Generative AI, we provide comprehensive post-deployment support. Our teams remain engaged with your organization to help scale, optimize, and innovate over time.",
+    },
+  ];
+  
   return (
     <>
       <Header links={navItems} />
@@ -162,6 +192,16 @@ const Index = () => {
       {testimonials.slice(0, 3).map((testimonial, index) => ( 
       <CardV4 title={testimonial.title} description={testimonial.description} />
      ))}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-5xl mx-auto">
+        {steps.map((step, index) => (
+          <CardV5
+            key={index}
+            title={step.title}
+            description={step.description}
+            stepNumber={index + 1}
+          />
+        ))}
       </div>
       <Footer />
     </>
