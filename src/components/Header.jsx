@@ -63,27 +63,30 @@ const Header = ({ links }) => {
         >
           <ul className="cmp-navigation__group flex flex-col md:h-full h-screen lg:items-center md:flex-row lg:my-0 my-[-1px] bg-transparent">
             {links &&
-              links.map((item, index) => (
-                <li
-                  key={index}
-                  className={`cmp-navigation__item py-2 px-4 ml-0 md:py-0 ${
-                    isScrolled
-                      ? "text-black hover:text-gray-300"
-                      : "text-white hover:text-gray-700"
-                  } ${menuOpen ? " text-white" : ""} ${
-                    isActive(item === "home" ? "/" : `/${item}`)
-                      ? "lg:border-b lg:border-white"
-                      : ""
-                  }`}
-                >
-                  <a
-                    href={item === "home" ? "/" : `/${item}`}
-                    className={`cmp-navigation__item-link capitalize`}
+              links.map((item, index) => {
+                const isActiveTab = isActive(item === "home" ? "/" : `/${item}`);
+                return (
+                  <li
+                    key={index}
+                    className={`cmp-navigation__item py-2 px-4 ml-0 md:py-0 ${
+                      isScrolled
+                        ? isActiveTab
+                          ? "text-red-600"
+                          : "text-black hover:text-gray-300"
+                        : isActiveTab
+                        ? "text-red-600"
+                        : "text-white hover:text-gray-700"
+                    } ${menuOpen ? "text-white" : ""}`}
                   >
-                    {item}
-                  </a>
-                </li>
-              ))}
+                    <a
+                      href={item === "home" ? "/" : `/${item}`}
+                      className="cmp-navigation__item-link capitalize"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                );
+              })}
           </ul>
         </nav>
         {/* Hamburger Menu */}
