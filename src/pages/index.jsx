@@ -18,7 +18,7 @@ import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
 import { CardV4 } from "../components/CardV4";
 import CardV5 from "../components/CardV5";
-
+import Accordion from "../components/Accordion";
 
 const Index = () => {
   const navItems = ["home", "about", "services", "demo"];
@@ -141,6 +141,26 @@ const Index = () => {
     },
   ];
 
+  const accordionItems = [
+    {
+      title: "We need additional help on documentation (like an MSA or security questionnaire). ",
+      description: "We’re happy to work together on your company’s security questionnaire or an MSA! Please reach out to our sales team at miro.com/contact/sales for specific questions.",
+    },
+    {
+      title: "I am a staff member or student of an educational institution.",
+      description: "Discover our step-by-step approach to delivering high-quality websites, from planning and design to development and deployment.",
+    },
+    {
+      title: "Customer Support",
+      description: "We provide dedicated customer support to ensure your website operates seamlessly and meets your business needs.",
+    },
+    {
+      title: "Why Choose Us?",
+      description: "Find out why our clients trust us for their web development projects. Quality, reliability, and innovation are at the core of what we do.",
+    },
+  ];
+  
+
   return (
     <>
       <Header links={navItems} />
@@ -252,11 +272,16 @@ const Index = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8 max-w-7xl w-full">
         {capabilities.map((capability, index) => (
-          <CardV5 icon ={capability.icon}   title ={capability.title}  description={capability.description}/>
+          <CardV5
+            icon={capability.icon}
+            title={capability.title}
+            description={capability.description}
+          />
         ))}
-
-        
       </div>
+      <SectionContainer className="mt-10">
+      <Accordion  items ={accordionItems} />
+      </SectionContainer>
       <Footer />
     </>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
 const Accordion = ({ items, singleOpen, defaultOpen,showToggle }) => {
   const [openIndexes, setOpenIndexes] = useState(
     singleOpen
@@ -31,9 +30,8 @@ const Accordion = ({ items, singleOpen, defaultOpen,showToggle }) => {
     }
     setIsAllOpen(!isAllOpen); // Toggle the "Open All" / "Close All" state
   };
-
   return (
-    <div className="accordion w-full max-w-xl mx-auto">
+    <div className="accordion w-full max-w-[1240px] mx-auto ">
       <button
         className={`${showToggle ? "block":"hidden" } accordion-toggle-all mb-4 px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none hover:bg-blue-400`}
         onClick={toggleAll}
@@ -47,26 +45,33 @@ const Accordion = ({ items, singleOpen, defaultOpen,showToggle }) => {
 
         return (
           <div
-            className={`accordion-item mb-2 border rounded-md ${isOpen ? 'bg-gray-100' : 'bg-white'}`}
+            className={`py-3 accordion-item mb-8 border rounded-md ${isOpen ? 'bg-blue-100' : 'bg-gray-100'}`}
             key={index}
           >
             <button
-              className="accordion-header w-full px-4 py-2 text-left font-medium text-gray-700 focus:outline-none hover:bg-gray-200"
+              className="accordion-header items-center flex justify-between w-full   px-4  focus:outline-none "
               onClick={() => togglePanel(index)}
               aria-expanded={isOpen}
               aria-controls={`panel-${index}`}
               id={`accordion-header-${index}`}
               tabIndex={0}
             >
-              {item.title}
+              <h3 className='text-center lg:text-3xl text-2xl text-black font-normal '>
+              <span >{item.title}</span> 
+              </h3>
+             <span className='text-3xl font-bold'>
+              {
+                isOpen ? '-' : '+'
+              }
+             </span>
             </button>
             <div
-              className={`accordion-panel ${isOpen ? 'block' : 'hidden'} px-4 py-2`}
+              className={`accordion-panel text-gray-700 text-lg text-left  leading-10   ${isOpen ? 'block' : 'hidden'} px-4 py-2`}
               id={`panel-${index}`}
               role="region"
               aria-labelledby={`accordion-header-${index}`}
             >
-              {item.content}
+              {item.description}
             </div>
           </div>
         );
@@ -93,9 +98,9 @@ Accordion.propTypes = {
 Accordion.defaultProps = {
   // Default items for the accordion
   items: [
-    { title: 'Panel 1', content: 'Content for panel 1' },
-    { title: 'Panel 2', content: 'Content for panel 2' },
-    { title: 'Panel 3', content: 'Content for panel 3' },
+    { title: 'Panel 1', description: 'Content for panel 1' },
+    { title: 'Panel 2', description: 'Content for panel 2' },
+    { title: 'Panel 3', description: 'Content for panel 3' },
   ],
   singleOpen: true,
   defaultOpen: null,
