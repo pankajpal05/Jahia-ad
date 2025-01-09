@@ -41,7 +41,7 @@ const Header = ({ links, isTransparent }) => {
           ? isScrolled
             ? "bg-white text-black shadow-custom-light"
             : "bg-transparent text-white"
-          : "bg-white text-black"
+          : "bg-white text-black shadow-custom-light"
       } ${menuOpen ? "bg-gray-800 text-white" : ""}`}
     >
       <div
@@ -72,13 +72,17 @@ const Header = ({ links, isTransparent }) => {
                   <li
                     key={index}
                     className={`cmp-navigation__item py-2 px-4 ml-0 md:py-0 ${
-                      isScrolled
-                        ? isActiveTab
+                      isTransparent
+                        ? isScrolled
+                          ? isActiveTab
+                            ? "text-red-600"
+                            : "text-black hover:text-gray-300"
+                          : isActiveTab
                           ? "text-red-600"
-                          : "text-black hover:text-gray-300"
+                          : "text-white hover:text-gray-700"
                         : isActiveTab
                         ? "text-red-600"
-                        : "text-white hover:text-gray-700"
+                        : "text-black hover:text-gray-300"
                     } ${menuOpen ? "text-white" : ""}`}
                   >
                     <a
