@@ -21,11 +21,7 @@ const TeaserV2 = (props) => {
           >
             {preTitle}
           </p>
-          <h2
-            id="teaser-title"
-            className="cmp-teaser__title font-playfair text-white lg:text-[44px] text-[35px] lg:max-w-[85%] font-black leading-10 mt-2.5"
-            aria-label={title}
-          >
+          <h2 className="cmp-teaser__title text-center lg:text-4xl text-3xl text-black font-semibold mx-auto">
             {title}
           </h2>
           <div className="cmp-teaser__action-container">

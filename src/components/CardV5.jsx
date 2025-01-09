@@ -6,8 +6,10 @@ const CardV5 = ({ title, description, stepNumber }) => {
       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full text-lg font-bold">
         {stepNumber}
       </div>
-      <h3 className="text-xl font-semibold text-black mt-6 mb-2 text-center">{title}</h3>
-      <p className="text-black - text-center">{description}</p>
+      <h2 className="cmp-teaser__title text-center lg:text-4xl text-3xl text-black font-semibold mx-auto">
+            {title}
+          </h2>
+      <div className="cmp-teaser__description text-gray-700 text-lg lg:text-2xl">{description}</div>
     </div>
   );
 };

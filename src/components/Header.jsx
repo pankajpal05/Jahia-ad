@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 
-const Header = ({ links }) => {
+const Header = ({ links, isTransparent }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -13,11 +13,11 @@ const Header = ({ links }) => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  
+
   useEffect(() => {
     const handleScroll = () => {
       if (menuOpen) {
-        return
+        return;
       }
       if (window.scrollY > 10) {
         setIsScrolled(true);
@@ -36,21 +36,23 @@ const Header = ({ links }) => {
 
   return (
     <header
-      className={`navigation fixed top-0 w-full z-50 transition-all duration-300 ease-in-out  ${
-        isScrolled
-          ? "bg-white text-black shadow-custom-light"
-          : "bg-transparent text-black"
+      className={`navigation fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
+        isTransparent
+          ? isScrolled
+            ? "bg-white text-black shadow-custom-light"
+            : "bg-transparent text-white"
+          : "bg-white text-black"
       } ${menuOpen ? "bg-gray-800 text-white" : ""}`}
     >
       <div
         className={`px-4 flex items-center justify-between py-4 m-auto lg:max-w-[1240px] ${
           menuOpen ? "bg-gray-800 text-white" : ""
-        } `}
+        }`}
       >
         {/* Logo */}
         <div
           className={`text-2xl font-bold ${
-            isScrolled ? "text-black" : "text-white"
+            isScrolled || !isTransparent ? "text-black" : "text-white"
           } ${menuOpen ? "text-white" : ""}`}
         >
           Logo
@@ -64,7 +66,8 @@ const Header = ({ links }) => {
           <ul className="cmp-navigation__group flex flex-col md:h-full h-screen lg:items-center md:flex-row lg:my-0 my-[-1px] bg-transparent">
             {links &&
               links.map((item, index) => {
-                const isActiveTab = isActive(item === "home" ? "/" : `/${item}`);
+                const isActiveTab =
+                  isActive(item === "home" ? "/" : `/${item}`);
                 return (
                   <li
                     key={index}
@@ -136,6 +139,7 @@ const Header = ({ links }) => {
 // Define PropTypes
 Header.propTypes = {
   links: PropTypes.array,
+  isTransparent: PropTypes.bool,
 };
 
 // Default props

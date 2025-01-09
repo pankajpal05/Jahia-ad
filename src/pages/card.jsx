@@ -138,6 +138,8 @@ const Card = () => {
         gridCols="3"
         isHeading="true"
         heading="Card V3"
+        backgroundType="blank"
+        backgroundContent='secondary'
       >
         {testimonials.slice(-3).map((testimonial, index) => (
           <TeaserV3
