@@ -90,20 +90,20 @@ const Form = () => {
       <div className="bg-white p-6 shadow-lg w-11/12 lg:max-w-[1240px] flex flex-col lg:flex-row md:justify-between py-6 md:py-14 md:px-14 lg:px-14">
         <div className="mb-10 w-full lg:w-[40%]">
           <div className="mb-11">
-            <h2 className="text-3xl font-semibold mb-3 pb-2">Contact Us</h2>
-            <h3 className="text-2xl lg:text-4xl text-[#1A1A1A] font-medium pb-5">
-              Time to break the ice?
+            <h2 className="text-3xl lg:text-4xl font-semibold mb-3 pb-2">Contact Us</h2>
+            <h3 className="text-2xl lg:text-3xl text-[#1A1A1A] font-medium pb-5">
+              Ready to Accelerate Your Digital Transformation
             </h3>
             <p>We would love to hear from you.</p>
           </div>
-          <p className="text-lg text-red-600 mt-2 pb-5">
+          {/* <p className="text-lg text-red-600 mt-2 pb-5">
             <a
               href="mailto:sales@test.com"
               className="text-2xl leading-9 font-semibold"
             >
               sales@test.com
             </a>
-          </p>
+          </p> */}
         </div>
         <form onSubmit={handleSubmit} className="w-full lg:w-[50%] grid gap-4 sm:grid-cols-2">
           <div className="mb-4 sm:col-span-1">
