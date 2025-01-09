@@ -13,15 +13,15 @@ export const CardV4 = ({ title, description }) => {
         <div className="cmp-teaser__content text-center lg:max-w-[1240px] mx-auto">
           {title && (
             <h1
-              className="cmp-teaser_title font-semibold text-xl"
+              className="cmp-teaser__title text-center lg:text-3xl text-2xl text-black font-semibold mx-auto"
             >
               {title}
             </h1>
           )}
           {description && (
-            <div className="cmp-teaser_description">
-              <p>{description}</p>
-            </div>
+            <div className="cmp-teaser__description text-gray-700 text-lg lg:text-xl">
+            {description}
+          </div>
           )}
         </div>
       </div>

@@ -116,8 +116,11 @@ const Demo = () => {
   ];
   return (
     <>
-      <Header links={navItems} />
-        <Hero
+      <Header
+       links={navItems}
+       isTransparent={false}
+        />
+      {/* <Hero
           title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
           subtitle=""
           description="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
@@ -127,47 +130,82 @@ const Demo = () => {
           backgroundContent="./sarai-at-toria-apple-pie-bonfire.mp4"
           theme="dark"
           alignment="center"
-        />
-        <SectionContainer 
-        alignment="center" 
+        /> */}
+      <SectionContainer
+        alignment="center"
+        gridCols="1"
+        backgroundType="blank"
+        backgroundContent="secondary"
+      >
+        {testimonials.slice(0, 1).map((testimonial, index) => (
+          <Teaser
+            key={index}
+            title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
+            description="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
+            callToAction="Get Started"
+          />
+        ))}
+      </SectionContainer>
+      <SectionContainer
+        alignment="center"
         isHeading="true"
         title="Who We Are"
         heading="Client-Centric to the bone"
-        description="We are a consulting and professional services firm dedicated to transforming how organizations engage with their audiences and manage operations in the digital realm. Our team of seasoned experts crafts robust strategies across e-Commerce, Content Management Systems (CMS), Data Engineering, and advanced Analytics, powered by AI and Generative AI. Rooted in a deep understanding of industry challenges and global market trends, we collaborate with enterprise-level clients as well as EdTech and Government entities to enable seamless digital transformations. By merging best-in-class technology stacks and proprietary frameworks, we help you innovate, scale, and thrive in today’s rapidly evolving ecosystem.">
-        </SectionContainer>
-        <SectionContainer alignment="center" gridCols="3" isHeading="true" heading="Industries We Serve">
-            {testimonials.slice(-3).map((testimonial, index) => (
-                <TeaserV3 key={index}
-                  title={testimonial.title}
-                  description={testimonial.description}
-                  image={testimonial.brandImg}
-                />
-            ))}
-        </SectionContainer>
-        <SectionContainer alignment="center" gridCols="3" isHeading="true" heading="Success Stories / Testimonials">
-            {testimonials.slice(0, 3).map((testimonial, index) => (
-                <TestimonialCard key={index}
-                  title={testimonial.title}
-                  description={testimonial.description}
-                  image={testimonial.image}
-                />
-            ))}
-        </SectionContainer>
-        <SectionContainer 
-        heading="Our Approach" 
-        description="We combine strategic consulting, engineering excellence, and cutting-edge research to guide you through every phase of your transformation journey" 
-        gridCols="3" 
-        isHeading="true" 
-        alignment="center">
-            {steps.map((step, index) => (
-                <CardV5
-                    key={index}
-                    title={step.title}
-                    description={step.description}
-                    stepNumber={index + 1}
-                />
-            ))}
-        </SectionContainer>
+        description="We are a consulting and professional services firm dedicated to transforming how organizations engage with their audiences and manage operations in the digital realm. Our team of seasoned experts crafts robust strategies across e-Commerce, Content Management Systems (CMS), Data Engineering, and advanced Analytics, powered by AI and Generative AI. Rooted in a deep understanding of industry challenges and global market trends, we collaborate with enterprise-level clients as well as EdTech and Government entities to enable seamless digital transformations. By merging best-in-class technology stacks and proprietary frameworks, we help you innovate, scale, and thrive in today’s rapidly evolving ecosystem."
+      >
+
+      </SectionContainer>
+      <SectionContainer
+        alignment="center"
+        gridCols="3"
+        isHeading="true"
+        heading="Industries We Serve"
+        backgroundType="blank"
+        backgroundContent="secondary"
+      >
+        {testimonials.slice(-3).map((testimonial, index) => (
+          <TeaserV3
+            key={index}
+            title={testimonial.title}
+            description={testimonial.description}
+            image={testimonial.brandImg}
+          />
+        ))}
+      </SectionContainer>
+      <SectionContainer
+        alignment="center"
+        gridCols="3"
+        isHeading="true"
+        heading="Success Stories / Testimonials"
+      >
+        {testimonials.slice(0, 3).map((testimonial, index) => (
+          <TestimonialCard
+            key={index}
+            title={testimonial.title}
+            description={testimonial.description}
+            image={testimonial.image}
+            cta={true}
+          />
+        ))}
+      </SectionContainer>
+      <SectionContainer
+        heading="Our Approach"
+        description="We combine strategic consulting, engineering excellence, and cutting-edge research to guide you through every phase of your transformation journey"
+        gridCols="3"
+        isHeading="true"
+        alignment="center"
+        backgroundType="blank"
+        backgroundContent="secondary"
+      >
+        {steps.map((step, index) => (
+          <CardV5
+            key={index}
+            title={step.title}
+            description={step.description}
+            stepNumber={index + 1}
+          />
+        ))}
+      </SectionContainer>
       <Footer />
     </>
   );

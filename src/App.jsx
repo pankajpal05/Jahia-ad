@@ -7,7 +7,7 @@ import Card from "./pages/card"
 const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-gray-100">
+      <div className="flex flex-col min-h-screen bg-white">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/demo" element={<Demo />} />

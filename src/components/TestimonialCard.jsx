@@ -28,12 +28,12 @@ const TestimonialCard = ({ title, description, image,alignment , cta = false  })
           {title}
         </h3>
         <div className="opacity-0 -translate-y-[-50%] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-        <p
+        <div
           id={`card-description-${title}`}
-          className="cmp-teaser__description text-xs sm:text-sm md:text-base text-white opacity-90"
+          className="cmp-teaser__description text-gray-300 text-lg lg:text-xl"
         >
           {description}
-        </p>
+        </div>
         {
           cta &&
           <div className="cta-btn mt-4">

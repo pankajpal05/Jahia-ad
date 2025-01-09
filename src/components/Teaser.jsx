@@ -9,14 +9,14 @@ const Teaser = ({ title, description, callToAction }) => {
         data-cmp-data-layer="">
         <div className="cmp-teaser__content flex flex-col gap-5 card text-center px-6 py-10">
           {/* Title */}
-          <h2 className="cmp-teaser__title text-center lg:text-4xl text-3xl text-black font-semibold leading-[1.5rem] mx-auto">
+          <h2 className="cmp-teaser__title text-center lg:text-4xl text-3xl text-black font-semibold mx-auto">
             {title}
           </h2>
           {/* Description */}
           {description && (
-            <p className="cmp-teaser__description leading-[1.5rem] text-gray-700 text-lg lg:text-2xl">
+            <div className="cmp-teaser__description text-gray-700 text-lg lg:text-2xl">
               {description}
-            </p>
+            </div>
           )}
 
           {/* Call to Action */}
@@ -28,7 +28,7 @@ const Teaser = ({ title, description, callToAction }) => {
                 alignment="center"
                 ctaStyle="primary"
                 size="md"
-                icon="./vite.svg"
+                icon=""
                 iconPosition="right"
                 bgColor=""
                 ariaLabel="Shop Now"

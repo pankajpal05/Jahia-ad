@@ -11,12 +11,12 @@ const CardV5 = ({ title, description, stepNumber, icon }) => {
        }
 
        {
-        title && <h3 className="text-xl font-semibold text-black mt-6 mb-2 text-center">
+        title && <h3 className="cmp-teaser__title text-center lg:text-3xl text-2xl text-black font-semibold mx-auto">
         {title}
       </h3>
        }
       {
-        description && <p className="text-gray-600  text-center">{description}</p>
+        description && <div className="cmp-teaser__description text-gray-700 text-lg lg:text-xl">{description}</div>
       }
       
     </div>

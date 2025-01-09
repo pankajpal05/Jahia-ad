@@ -33,15 +33,17 @@ const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alig
   };
 
   return (
-    <section className={` font-sora py-12 w-full lg:max-w-[1240px] mx-auto px-4 text-${alignment}`}>
-      {
-        isHeading && <Heading title={title} heading={heading} description={description}/>
-      }
-      {/* Background Layer */}
-      {renderBackground()}
-      {/* Foreground Content */}
-      <div className={`${gridCols ? `grid grid-cols-1 lg:grid-cols-${gridCols} gap-4 ` : ""} cmp-container z-10 text-gray-900 ${backgroundType != 'blank' ? 'relative' :''}`}>
-        {children}
+    <section className={` font-sora py-12 w-full text-${alignment} ${backgroundType === "blank" ? `bg-${backgroundContent}` : 'bg-transparent'} `}>
+      <div className="lg:max-w-[1240px] mx-auto px-4 ">
+        {
+          isHeading && <Heading title={title} heading={heading} description={description}/>
+        }
+        {/* Background Layer */}
+        {renderBackground()}
+        {/* Foreground Content */}
+        <div className={`${gridCols ? `grid grid-cols-1 lg:grid-cols-${gridCols} gap-4 ` : ""} cmp-container z-10 text-gray-900 ${backgroundType != 'blank' ? 'relative' :''}`}>
+          {children}
+        </div>
       </div>
     </section>
   );

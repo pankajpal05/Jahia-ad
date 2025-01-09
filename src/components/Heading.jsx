@@ -6,19 +6,19 @@ const Heading = ({ title, heading, description, alignment }) => {
   return (
     <div className={`lg:max-w-[1240px] mx-auto px-4 mb-6 text-${alignment} w-full`}>
       {title && (
-        <h5 className={`text-xs font-semibold uppercase tracking-widest text-primary`}>
+        <h5 className={`text-sm font-semibold uppercase tracking-widest text-primary`}>
           {title}
         </h5>
       )}
       {heading && (
-        <h2 className={`font-medium text-4xl lg:text-5xl my-3 text-dark`}>
+        <h2 className={`lg:text-4xl text-3xl text-black font-semibold mx-auto py-3`}>
           {heading}
         </h2>
       )}
       {description && (
-        <p className={`text-base text-muted`}>
+        <div className={`text-gray-700 text-lg lg:text-xl`}>
           {description}
-        </p>
+        </div>
       )}
     </div>
   );

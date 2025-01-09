@@ -23,7 +23,7 @@ export const TeaserV3 = ({ image, description, altText }) => {
       </div>
       <div className="cmp-teaser__content">
         <div className="cmp-teaser__description">
-          {description && <p className="text-center">{description}</p>}
+          {description && <div className="cmp-teaser__description text-gray-700 text-lg lg:text-xl">{description}</div>}
         </div>
       </div>
       {/* <div className="cmp-action__container mt-2 flex justify-center opacity-0 -translate-x-[30%] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-in-out">
