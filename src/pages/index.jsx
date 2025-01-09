@@ -18,6 +18,7 @@ import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
 import { CardV4 } from "../components/CardV4";
 import CardV5 from "../components/CardV5";
+import CardV6 from "../components/CardV6";
 
 const Index = () => {
   const navItems = ["home", "about", "services", "demo"];
@@ -29,7 +30,8 @@ const Index = () => {
       description: "The service was excellent and exceeded expectations.",
       image: "https://picsum.photos/id/237/200/300",
       callToAction: "Shop Now",
-      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
+      brandImg:
+        "https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
     },
     {
       preTitle: "Special Offer",
@@ -37,7 +39,8 @@ const Index = () => {
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/238/200/300",
       callToAction: "Shop Now",
-      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/salesforce-new.webp"
+      brandImg:
+        "https://cdn.ranosys.com/wp-content/uploads/2024/05/salesforce-new.webp",
     },
     {
       preTitle: "Special Offer",
@@ -45,7 +48,8 @@ const Index = () => {
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/239/200/300",
       callToAction: "Shop Now",
-      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/outsystems2.webp"
+      brandImg:
+        "https://cdn.ranosys.com/wp-content/uploads/2024/05/outsystems2.webp",
     },
     {
       preTitle: "Special Offer",
@@ -53,7 +57,8 @@ const Index = () => {
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/259/200/300",
       callToAction: "Shop Now",
-      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/microsoft-logo.webp"
+      brandImg:
+        "https://cdn.ranosys.com/wp-content/uploads/2024/05/microsoft-logo.webp",
     },
     {
       preTitle: "Special Offer",
@@ -76,21 +81,25 @@ const Index = () => {
       title: "Discovery & Assessment",
       description:
         "We begin with an in-depth evaluation of your current digital environment, stakeholder needs, and overarching business objectives. Our experts identify technology gaps, process inefficiencies, and areas for AI/ML enhancements.",
+      icon: "🛒",
     },
     {
       title: "Strategy & Roadmap",
       description:
         "We create a customized digital transformation roadmap encompassing CMS modernization, e-Commerce storefront optimization, and data strategy. Our proposals detail cost-effective and scalable frameworks, ensuring you can adapt quickly to market shifts.",
+      icon: "📋",
     },
     {
       title: "Solution Implementation",
       description:
         "Leveraging partnerships with Adobe, Jahia, Magento, and leading AI/ML tools, we build solutions that fit your specific industry and compliance requirements. Our iterative development process ensures transparency and agility throughout the engagement.",
+      icon: "📊",
     },
     {
       title: "Optimization & Analytics",
       description:
         "We deploy real-time analytics and predictive AI to monitor user engagement, operational efficiency, and customer satisfaction post-launch. Continuous refinement and model training enable long-term sustainability and ROI.",
+      icon: "🤖",
     },
     {
       title: "Ongoing Support & Innovation",
@@ -98,22 +107,55 @@ const Index = () => {
         "From routine maintenance to the integration of emerging technologies like Generative AI, we provide comprehensive post-deployment support. Our teams remain engaged with your organization to help scale, optimize, and innovate over time.",
     },
   ];
-  
+
+  const capabilities = [
+    {
+      title: "e-Commerce Solutions",
+      description:
+        "Custom storefronts, Magento implementation, and omnichannel customer engagement.",
+      icon: "🛒",
+    },
+    {
+      title: "CMS Platforms",
+      description:
+        "Deployment, optimization, and customization on Adobe, Jahia, and open-source systems.",
+      icon: "📋",
+    },
+    {
+      title: "Data Engineering & Analytics",
+      description:
+        "ETL pipelines, big data architecture, real-time dashboards, and predictive modeling.",
+      icon: "📊",
+    },
+    {
+      title: "AI & ML Services",
+      description:
+        "Model training, Generative AI, NLP applications, and AI-driven process automation.",
+      icon: "🤖",
+    },
+    {
+      title: "Digital Experience",
+      description:
+        "Personalization at scale, marketing automation, and user journey optimization.",
+      icon: "🌐",
+    },
+  ];
+
   return (
     <>
       <Header links={navItems} />
       {/* <SectionContainer backgroundType="" backgroundContent="" heightClass=""> */}
-        <Hero
-          title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
-          subtitle="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
-          description=""
-          ctaText="Get Started"
-          ctaLink="#"
-          backgroundType="video"
-          backgroundContent="./sarai-at-toria-apple-pie-bonfire.mp4"
-          theme="dark"
-          alignment="start"
-        />
+      <Hero
+        title="Accelerate Your Digital Future with End-to-End Consulting and Transformational Solutions"
+        subtitle="At Ayasya, we empower businesses with e-Commerce, CMS, Data Engineering, and AI/ML services—delivering innovative strategies and solutions that drive measurable growth in the digital era."
+        description=""
+        ctaText="Get Started"
+        ctaLink="#"
+        backgroundType="video"
+        backgroundContent="./sarai-at-toria-apple-pie-bonfire.mp4"
+        theme="dark"
+        alignment="start"
+      />
       {/* </SectionContainer> */}
       <div className="lg:max-w-[1240px] w-full mx-auto">
         <SectionContainer backgroundType="blank">
@@ -147,8 +189,8 @@ const Index = () => {
                 <TestimonialCard
                   title={testimonial.title}
                   description={testimonial.description}
-                  image={testimonial.image} 
-                  cta= {true}
+                  image={testimonial.image}
+                  cta={true}
                 />
               </SwiperSlide>
             ))}
@@ -183,15 +225,20 @@ const Index = () => {
         </SectionContainer>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 mx-2 mb-5">
-      {testimonials.slice(0, 4).map((testimonial, index) => (
-        <TeaserV3  img = {testimonial.brandImg} description={testimonial.description}/>
-      ))}
-      </div> 
-     
+        {testimonials.slice(0, 4).map((testimonial, index) => (
+          <TeaserV3
+            img={testimonial.brandImg}
+            description={testimonial.description}
+          />
+        ))}
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-2">
-      {testimonials.slice(0, 3).map((testimonial, index) => ( 
-      <CardV4 title={testimonial.title} description={testimonial.description} />
-     ))}
+        {testimonials.slice(0, 3).map((testimonial, index) => (
+          <CardV4
+            title={testimonial.title}
+            description={testimonial.description}
+          />
+        ))}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-5xl mx-auto">
         {steps.map((step, index) => (
@@ -203,9 +250,15 @@ const Index = () => {
           />
         ))}
       </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8 max-w-7xl w-full">
+        {capabilities.map((capability, index) => (
+          <CardV5 icon ={capability.icon}   title ={capability.title}  description={capability.description}/>
+        ))}
+
+        
+      </div>
       <Footer />
     </>
   );
 };
-
 export default Index;

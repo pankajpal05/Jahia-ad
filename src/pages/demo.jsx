@@ -6,20 +6,13 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import Header from "../components/Header";
 import TestimonialCard from "../components/TestimonialCard";
 import SectionContainer from "../components/SectionContainer";
 import Hero from "../components/Hero";
-import TeaserV2 from "../components/TeaserV2";
-import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
-import Heading from "../components/Heading";
-import Nav from "../components/Nav";
-import { CardV4 } from "../components/CardV4";
 import CardV5 from "../components/CardV5";
-
 const Demo = () => {
     const navItems = ["home", "about", "services", "demo"];
 
