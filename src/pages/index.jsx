@@ -18,7 +18,7 @@ import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
 import { CardV4 } from "../components/CardV4";
 import CardV5 from "../components/CardV5";
-import CardV6 from "../components/CardV6";
+
 
 const Index = () => {
   const navItems = ["home", "about", "services", "demo"];
