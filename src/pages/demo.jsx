@@ -193,7 +193,7 @@ const Demo = () => {
       <SectionContainer
         heading="Our Approach"
         description="We combine strategic consulting, engineering excellence, and cutting-edge research to guide you through every phase of your transformation journey"
-        gridCols="3"
+        gridCols="2"
         isHeading="true"
         alignment="center"
         backgroundType="blank"
