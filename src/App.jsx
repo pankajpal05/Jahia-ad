@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router,Route,  Routes } from "react-router-dom";
 import Index from "./pages";
 import Demo from "./pages/demo.jsx";
+import Card from "./pages/card"
 const App = () => {
   return (
     <Router>
@@ -10,6 +11,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/demo" element={<Demo />} />
+          <Route path="/card" element={<Card />} />
         </Routes>
       </div>
     </Router>

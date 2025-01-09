@@ -33,7 +33,7 @@ const SectionContainer = ({ backgroundType, backgroundContent, heightClass, alig
   };
 
   return (
-    <section className={`py-12 w-full lg:max-w-[1240px] mx-auto px-4 text-${alignment}`}>
+    <section className={` font-sora py-12 w-full lg:max-w-[1240px] mx-auto px-4 text-${alignment}`}>
       {
         isHeading && <Heading title={title} heading={heading} description={description}/>
       }

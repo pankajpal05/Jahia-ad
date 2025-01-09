@@ -11,7 +11,7 @@ const Heading = ({ title, heading, description, alignment }) => {
         </h5>
       )}
       {heading && (
-        <h2 className={`font-medium text-3xl lg:text-4xl my-2 text-dark`}>
+        <h2 className={`font-medium text-4xl lg:text-5xl my-3 text-dark`}>
           {heading}
         </h2>
       )}
