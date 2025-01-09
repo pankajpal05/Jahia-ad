@@ -192,6 +192,7 @@ const Card = () => {
             title={testimonial.title}
             description={testimonial.description}
             image={testimonial.image}
+            cta= {true}
           />
         ))}
       </SectionContainer>
