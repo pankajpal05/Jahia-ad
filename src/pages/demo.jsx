@@ -12,6 +12,8 @@ import SectionContainer from "../components/SectionContainer";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
+import Heading from "../components/Heading";
+import { CardV4 } from "../components/CardV4";
 import CardV5 from "../components/CardV5";
 const Demo = () => {
     const navItems = ["home", "about", "services", "demo"];

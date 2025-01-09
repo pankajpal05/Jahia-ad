@@ -7,18 +7,13 @@ export default {
         'custom-light': '0px 1px 20px 0px rgba(0, 0, 0, 0.1)',
       },
       colors: {
-        muted: "#6c757d",
         primary: "#0d6efd",
-        success: "#198754",
-        info: "#0dcaf0",
-        warning: "#ffc107",
-        danger: "#dc3545",
+        primary_hover: "#2f80f7",
         secondary: "#6c757d",
-        dark: "#212529",
-        body: "#000000",
-        light: "#f8f9fa",
-        white: "#ffffff",
-        grey:"#757574",
+        secondary_hover: "#7a7d80",
+        tertiary: "#000000",
+        tertiary_hover: "#444444",
+        outline: "#f2f5f7"
       },
       fontSize: {
         xs: "0.75rem", // 12px
@@ -43,6 +38,12 @@ export default {
         extrabold: 800,
         black: 900,
       },
+      fontFamily: {
+        'sans': ['Helvetica', 'Arial', 'sans-serif'],
+        'sora': ['Sora', 'sans-serif'],
+        'serif': ['Sora', 'ui-serif', 'Georgia', 'serif'],
+        'mono': ['ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
       spacing: {
         1: "0.25rem", // 4px
         2: "0.5rem", // 8px
@@ -56,12 +57,18 @@ export default {
   },
   safelist: [
     {
-      pattern: /^grid-cols-(1|2|3|4|5|6|7|8|9|10|11|12)$/,  // added pattern to Dynamically generate grid-cols-* classes
-      variants: ['lg']
+      pattern: /^grid-cols-(1|2|3|4|5|6|7|8|9|10|11|12)$/, // Safelist dynamic grid-cols-*
+      variants: ['lg'],
     },
     {
-      pattern: /^text-(left|center|right)$/, // added pattern to Dynamically generate text-* classes
-      variants: ['lg']
+      pattern: /^text-(primary|secondary|tertiary)$/, // Safelist dynamic text-* colors
+    },
+    {
+      pattern: /^bg-(primary|secondary|tertiary)$/, // Safelist dynamic bg-* colors
+    },
+    {
+      pattern: /^bg-(primary|secondary|tertiary)_hover$/, // Safelist dynamic hover:bg-* colors
+      variants: ['hover'],
     },
   ],
   plugins: [],
