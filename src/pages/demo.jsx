@@ -16,7 +16,6 @@ import Teaser from "../components/Teaser";
 import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
-import Nav from "../components/Nav";
 import { CardV4 } from "../components/CardV4";
 import CardV5 from "../components/CardV5";
 
