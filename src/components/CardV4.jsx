@@ -11,10 +11,10 @@ export const CardV4 = ({ title, description }) => {
     >
       <div className="cmp-teaser">
         <div className="cmp-teaser__content text-center lg:max-w-[1240px] mx-auto">
-          <h2 className="cmp-teaser__title text-center lg:text-4xl text-3xl text-black font-semibold mx-auto">
+          <h2 className="cmp-teaser__title text-center lg:text-3xl text-2xl text-black font-semibold mx-auto">
             {title}
           </h2>
-          <div className="cmp-teaser__description text-gray-700 text-lg lg:text-2xl">
+          <div className="cmp-teaser__description text-gray-700 text-lg lg:text-xl">
             {description}
           </div>
         </div>

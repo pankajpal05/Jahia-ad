@@ -21,7 +21,7 @@ const TeaserV2 = (props) => {
           >
             {preTitle}
           </p>
-          <h2 className="cmp-teaser__title text-center lg:text-4xl text-3xl text-black font-semibold mx-auto">
+          <h2 className="cmp-teaser__title text-center lg:text-3xl text-2xl text-black font-semibold mx-auto">
             {title}
           </h2>
           <div className="cmp-teaser__action-container">

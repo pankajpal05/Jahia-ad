@@ -30,7 +30,7 @@ const TestimonialCard = ({ title, description, image,alignment , cta = false  })
         <div className="opacity-0 -translate-y-[-50%] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
         <div
           id={`card-description-${title}`}
-          className="cmp-teaser__description text-gray-300 text-lg lg:text-2xl"
+          className="cmp-teaser__description text-gray-300 text-lg lg:text-xl"
         >
           {description}
         </div>
