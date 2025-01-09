@@ -14,18 +14,19 @@ import Footer from "../components/Footer";
 import { TeaserV3 } from "../components/TeaserV3";
 import Heading from "../components/Heading";
 import { CardV4 } from "../components/CardV4";
+import Teaser from "../components/Teaser";
 import CardV5 from "../components/CardV5";
 const Demo = () => {
-    const navItems = ["home", "about", "services", "demo"];
+  const navItems = ["home", "about", "services", "demo"];
 
   const testimonials = [
     {
       preTitle: "Special Offer",
       title: "Great Service",
       description: "The service was excellent and exceeded expectations.",
-      image: "https://picsum.photos/id/237/200/300",
+      image: "https://picsum.photos/id/243/200/300",
       callToAction: "Shop Now",
-      brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
+      brandImg: "https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
     },
     {
       preTitle: "Special Offer",
@@ -39,7 +40,7 @@ const Demo = () => {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
       image: "https://picsum.photos/id/239/200/300",
-      
+
       callToAction: "Shop Now",
     },
     {
@@ -64,26 +65,26 @@ const Demo = () => {
       callToAction: "Shop Now",
     },
     {
-        preTitle: "Special Offer",
-        title: "Amazing Experience",
-        description: "I had an amazing experience, highly recommended!",
-        image: "https://picsum.photos/id/289/200/300",
-        callToAction: "Shop Now",
-        brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
-    },{
-        preTitle: "Special Offer",
-        title: "Amazing Experience",
-        description: "I had an amazing experience, highly recommended!",
-        image: "https://picsum.photos/id/289/200/300",
-        callToAction: "Shop Now",
-        brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/salesforce-new.webp",
-    },{
-        preTitle: "Special Offer",
-        title: "Amazing Experience",
-        description: "I had an amazing experience, highly recommended!",
-        image: "https://picsum.photos/id/289/200/300",
-        callToAction: "Shop Now",
-        brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/outsystems2.webp",
+      preTitle: "Special Offer",
+      title: "Amazing Experience",
+      description: "I had an amazing experience, highly recommended!",
+      image: "https://picsum.photos/id/289/200/300",
+      callToAction: "Shop Now",
+      brandImg: "https://cdn.ranosys.com/wp-content/uploads/2024/05/adobe-magento.webp",
+    }, {
+      preTitle: "Special Offer",
+      title: "Amazing Experience",
+      description: "I had an amazing experience, highly recommended!",
+      image: "https://picsum.photos/id/289/200/300",
+      callToAction: "Shop Now",
+      brandImg: "https://cdn.ranosys.com/wp-content/uploads/2024/05/salesforce-new.webp",
+    }, {
+      preTitle: "Special Offer",
+      title: "Amazing Experience",
+      description: "I had an amazing experience, highly recommended!",
+      image: "https://picsum.photos/id/289/200/300",
+      callToAction: "Shop Now",
+      brandImg: "https://cdn.ranosys.com/wp-content/uploads/2024/05/outsystems2.webp",
     }
   ];
 
@@ -191,7 +192,7 @@ const Demo = () => {
       <SectionContainer
         heading="Our Approach"
         description="We combine strategic consulting, engineering excellence, and cutting-edge research to guide you through every phase of your transformation journey"
-        gridCols="3"
+        gridCols="2"
         isHeading="true"
         alignment="center"
         backgroundType="blank"

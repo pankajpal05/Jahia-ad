@@ -5,7 +5,7 @@ import CTA from "./Cta";
 export const TeaserV3 = ({ image, description, altText }) => {
   return (
     <div
-      className="Teaser hover:bg-white mb-5 px-5 py-6 relative group cursor-pointer"
+      className="Teaser bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-500 mb-5 px-5 py-6 relative group cursor-pointer"
       tabIndex={0}
       role="region"
       aria-label="Teaser"

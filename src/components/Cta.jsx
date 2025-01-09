@@ -10,7 +10,7 @@ const CTA = ({
     iconPosition,
     ariaLabel,
 })=>{
-    const baseClasses =`cmp-teaser__action-link inline-flex items-center justify-${alignment} font-bold transition-all rounded px-4 py-2 capitalize`;
+    const baseClasses =`cmp-teaser__action-link inline-flex items-center justify-${alignment} font-bold transition-all rounded px-4 py-2 capitalize transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-500`;
     let styleClasses ="";
     if (ctaStyle === "primary" || ctaStyle === "secondary" || ctaStyle === "tertiary") {
       styleClasses = `bg-${ctaStyle} text-white hover:bg-${ctaStyle}_hover`;
