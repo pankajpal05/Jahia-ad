@@ -16,7 +16,7 @@ const CardV5 = ({ title, description, stepNumber, icon }) => {
       </h3>
        }
       {
-        description && <div className="cmp-teaser__description text-gray-700 text-md lg:text-lg">{description}</div>
+        description && <div className="cmp-teaser__description text-gray-700  text-center text-md lg:text-lg">{description}</div>
       }
       
     </div>
