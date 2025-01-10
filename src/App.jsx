@@ -5,10 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
+import video from "./assets/istockphoto-1411824263-640_adpp_is.mp4"
 import "./App.css";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
 
 import TestimonialCard from "./components/TestimonialCard";
+import VideoComponent from "./components/VideoComponent";
 
 const App = () => {
   const testimonials = [
@@ -20,34 +22,32 @@ const App = () => {
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/238/200/300", 
+      image: "https://picsum.photos/id/238/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/239/200/300", 
+      image: "https://picsum.photos/id/239/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/259/200/300", 
+      image: "https://picsum.photos/id/259/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/249/200/300", 
+      image: "https://picsum.photos/id/249/200/300",
     },
     {
       title: "Amazing Experience",
       description: "I had an amazing experience, highly recommended!",
-      image: "https://picsum.photos/id/289/200/300", 
+      image: "https://picsum.photos/id/289/200/300",
     },
   ];
-
   return (
     <>
       <p className="font-extrabold my-5">Extrabold font weight</p>
-
       <Swiper
         keyboard={{
           enabled: true,
@@ -80,6 +80,15 @@ const App = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <VideoComponent
+        videoUrl={video}
+        className="w-full border-2 border-white"
+        controls={true}
+        autoPlay={true}
+        muted={true}
+        loop={true}
+        isIframe={true}
+      />
     </>
   );
 };

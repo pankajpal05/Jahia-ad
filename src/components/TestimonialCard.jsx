@@ -18,6 +18,7 @@ const TestimonialCard = ({ title, description, image }) => {
           {description}
         </p>
       </div>
+      
     </div>
   );
 };
