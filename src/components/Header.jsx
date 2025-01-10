@@ -99,7 +99,7 @@ const Header = ({ links, isTransparent }) => {
         {/* Hamburger Menu */}
         <div
           className={`cmp_toggle-menu cursor-pointer md:hidden ${
-            isScrolled ? "text-black" : "text-white"
+            isScrolled ? "text-black" : "text-black"
           } ${menuOpen ? " text-white" : ""}`}
           onClick={toggleMenu}
         >

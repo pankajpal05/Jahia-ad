@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
-
 import "@fortawesome/fontawesome-free/css/all.min.css";
 // Import Swiper styles
 import "swiper/css";
@@ -88,7 +87,6 @@ const Demo = () => {
         brandImg:"https://cdn.ranosys.com/wp-content/uploads/2024/05/outsystems2.webp",
     }
   ];
-
   const steps = [
     {
       title: "Discovery & Assessment",
@@ -155,7 +153,6 @@ const Demo = () => {
         heading="Client-Centric to the bone"
         description="We are a consulting and professional services firm dedicated to transforming how organizations engage with their audiences and manage operations in the digital realm. Our team of seasoned experts crafts robust strategies across e-Commerce, Content Management Systems (CMS), Data Engineering, and advanced Analytics, powered by AI and Generative AI. Rooted in a deep understanding of industry challenges and global market trends, we collaborate with enterprise-level clients as well as EdTech and Government entities to enable seamless digital transformations. By merging best-in-class technology stacks and proprietary frameworks, we help you innovate, scale, and thrive in today’s rapidly evolving ecosystem."
       >
-
       </SectionContainer>
       <SectionContainer
         alignment="center"
@@ -212,5 +209,4 @@ const Demo = () => {
     </>
   );
 };
-
 export default Demo;
