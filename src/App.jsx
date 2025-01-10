@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,9 +6,8 @@ import "swiper/css/navigation";
 // import required modules
 import "./App.css";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
-
 import TestimonialCard from "./components/TestimonialCard";
-
+import ImageComponent from "./components/ImageComponent";
 const App = () => {
   const testimonials = [
     {
@@ -80,6 +78,14 @@ const App = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <ImageComponent
+        src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
+        alt="Placeholder Image"
+        width="300"
+        height="300"
+        className="custom-image rounded-lg "
+       
+      />
     </>
   );
 };
