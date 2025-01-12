@@ -42,6 +42,7 @@ const TestimonialCard = ({ title, description, image,alignment , cta = false  })
         }
         </div>
       </div>
+      
     </div>
   );
 };
